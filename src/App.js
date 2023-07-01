@@ -2,7 +2,10 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Preloader from './components/loader/Preloader';
 import BackgroundAnimation from './components/backgroundanimation/BackgroundAnimation';
+import Typewriter from './components/typewriter/Typewriter';
 import ScrollAlert from './components/scrollalert/ScrollAlert';
+
+const typewriterTexts = ["import './DivyanshGargDev';"];
 
 function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
@@ -40,6 +43,9 @@ function App() {
     <div className="App">
       <div class="background-animation">
         <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="0" endframe="212"></BackgroundAnimation>
+      </div>
+      <div class="layout">
+        <div class="intro-typewriter"><Typewriter texts={typewriterTexts} /></div>
       </div>
       <div class="scroll-action"><ScrollAlert /></div>
     </div>
