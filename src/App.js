@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Preloader from './components/loader/Preloader';
 import BackgroundAnimation from './components/backgroundanimation/BackgroundAnimation';
+import ScrollAlert from './components/scrollalert/ScrollAlert';
 
 function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
@@ -25,7 +26,7 @@ function App() {
         setIsImagesLoaded(true);
         setTimeout(() => {
           setIsLoading(false);
-        }, 500);
+        }, 10000);
       } catch (error) {
         console.error('Error preloading images:', error);
       }
@@ -40,6 +41,7 @@ function App() {
       <div class="background-animation">
         <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="0" endframe="212"></BackgroundAnimation>
       </div>
+      <div class="scroll-action"><ScrollAlert /></div>
     </div>
   );
 }

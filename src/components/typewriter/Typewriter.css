@@ -1,0 +1,37 @@
+.typed-text {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    font-family: "Courier New", Courier, monospace;
+    padding: 5px;
+}
+
+.cursor {
+    animation: blinkCursor 0.7s infinite;
+    font-weight:bold;
+}
+
+.typewriter-text-container {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    height: 100%;
+}
+
+.typewriter-text {
+    white-space: pre;
+    letter-spacing: 5px;
+    overflow:scroll;
+}
+
+#terminal-sign {
+
+}
+
+@keyframes blinkCursor {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -7,3 +7,9 @@
   ::-webkit-scrollbar {
     display: none;
   }
+
+.scroll-action {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}

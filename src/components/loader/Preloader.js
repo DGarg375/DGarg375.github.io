@@ -1,11 +1,16 @@
 import './Preloader.css';
+import Typewriter from '../typewriter/Typewriter';
+
+const typewriterTexts = ["Loading Animation Assets..."];
 
 const Preloader = props => {
     return(
     <div class="loader-background">
-        <div class="loader">
+        <div className="loader">
+            <div className="ring"></div>
+            <div className="circle"></div>
         </div>
-        <div class="loader-text">Loading Background Animation...</div>
+        <div class="preloader-typewriter"><Typewriter texts={typewriterTexts} /></div>
     </div>);
 };
 
