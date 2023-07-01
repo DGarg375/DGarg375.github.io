@@ -4,13 +4,35 @@ import Preloader from './components/loader/Preloader';
 import BackgroundAnimation from './components/backgroundanimation/BackgroundAnimation';
 
 function App() {
+  const [isImagesLoaded, setIsImagesLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 10000);
+    const preloadImages = async () => {
+      try {
+        const imagePromises = [];
+        for(let i = 0; i < 212; i++) {
+          const img = new Image();
+          img.src = `./frames/Frame (${(i + 1).toString()}).jpg`;
+          imagePromises.push(
+            new Promise((resolve, reject) => {
+              img.onload = resolve;
+              img.onerror = reject;
+            })
+          );
+        }
+        await Promise.all(imagePromises);
+        setIsImagesLoaded(true);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 5000);
+      } catch (error) {
+        console.error('Error preloading images:', error);
+      }
+    };
+    preloadImages();
   }, []);
-  if(isLoading) {
+  if(isLoading || !isImagesLoaded) {
     return <Preloader />
   }
   return (

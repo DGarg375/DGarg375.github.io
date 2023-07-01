@@ -1,0 +1,27 @@
+.loader-background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    flex-direction: column;
+}
+
+.loader {
+    border: 10px solid black;
+    border-top: 10px solid #BC13FE;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 1.3s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
