@@ -46,6 +46,16 @@ function App() {
       </div>
       <div class="layout">
         <div class="intro-typewriter"><Typewriter texts={typewriterTexts} /></div>
+        <div class="placeholder-div" id="placeholder-1"></div>
+        <div class="projects-slider">
+          <div class="projects-container"></div>
+        </div>
+        <div class="placeholder-div" id="placeholder-2"></div>
+        <div class="about-me-slider">
+          <div class="about-me-container"></div>
+        </div>
+        <div class="placeholder-div" id="placeholder-3"></div>
+        <div class="contact-me"></div>
       </div>
       <div class="scroll-action"><ScrollAlert /></div>
     </div>
