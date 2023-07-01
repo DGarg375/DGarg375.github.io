@@ -29,11 +29,6 @@ const BackgroundAnimation = props => {
         let tl = gsap.timeline();
         if(canvas.width > 800) {
             render = () => {
-                // context.canvas.width = images[ball.frame].width;
-                // context.canvas.height = images[ball.frame].height;
-                // context.clearRect(0, 0, canvas.width, canvas.height);
-                // context.fillStyle = "black";
-                // context.fillRect(0, 0, canvas.width, canvas.height);
                 const currentImage = images[ball.frame];
                 context.canvas.width = images[ball.frame].width;
                 context.canvas.height = images[ball.frame].height;
@@ -54,12 +49,7 @@ const BackgroundAnimation = props => {
     
             images[ball.frame].onload = render;
 
-        } else {
-            render = () => {
-                
-            };
         }
-
     }, []);
     return (
         <canvas ref={canvasRef} {...props}></canvas>
