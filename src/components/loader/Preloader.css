@@ -6,6 +6,7 @@
     justify-content: center;
     background: black;
     flex-direction: column;
+    row-gap: 35px;
 }
 
 .loader {
@@ -18,7 +19,7 @@
 .preloader-typewriter {
     color: white;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .ring,
