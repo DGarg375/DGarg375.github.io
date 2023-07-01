@@ -27,37 +27,38 @@ const BackgroundAnimation = props => {
         }
 
         let tl = gsap.timeline();
-        if(canvas.width < 530) {
+        if(canvas.width > 800) {
             render = () => {
-                context.canvas.width = images[ball.frame].width;
-                context.canvas.height = images[ball.frame].height;
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.fillStyle = "black";
-                context.fillRect(0, 0, canvas.width, canvas.height);
-            }
-        } else {
-            render = () => {
+                // context.canvas.width = images[ball.frame].width;
+                // context.canvas.height = images[ball.frame].height;
+                // context.clearRect(0, 0, canvas.width, canvas.height);
+                // context.fillStyle = "black";
+                // context.fillRect(0, 0, canvas.width, canvas.height);
                 const currentImage = images[ball.frame];
                 context.canvas.width = images[ball.frame].width;
                 context.canvas.height = images[ball.frame].height;
                 context.clearRect(0, 0, canvas.width, canvas.height);
                 context.drawImage(currentImage, 0, 0);
+            }
+            tl.to(ball, {
+                frame: endFrame-1,
+                snap: "frame",
+                ease: "none",
+                scrollTrigger: {
+                    scrub: true,
+                    pin: "canvas",
+                    end: '500%',
+                },
+                onUpdate: render,
+            });
+    
+            images[ball.frame].onload = render;
+
+        } else {
+            render = () => {
+                
             };
         }
-
-        tl.to(ball, {
-            frame: endFrame-1,
-            snap: "frame",
-            ease: "none",
-            scrollTrigger: {
-                scrub: true,
-                pin: "canvas",
-                end: '500%',
-            },
-            onUpdate: render,
-        });
-
-        images[ball.frame].onload = render;
 
     }, []);
     return (

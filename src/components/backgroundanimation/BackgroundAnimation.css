@@ -3,4 +3,5 @@ canvas {
     height: 100vh;
     object-fit: cover;
     position: absolute;
+    background-color: black;
   }
