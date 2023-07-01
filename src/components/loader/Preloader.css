@@ -70,3 +70,21 @@
     transform: scale(1.8);
   }
 }
+
+@media screen and (max-width: 1300px) {
+  .preloader-typewriter {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 838px) {
+  .preloader-typewriter {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .preloader-typewriter {
+    font-size: 0.7rem;
+  }
+}
