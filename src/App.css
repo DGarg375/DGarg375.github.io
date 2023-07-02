@@ -1,12 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+
+}
+a:hover {
+  color: #00c703;
+  cursor:default;
+}
 
 .scroll-action {
   width: 100%;
@@ -17,6 +32,25 @@
 .layout {
   position: absolute;
   width: 100%;
+}
+
+.navbar-container {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.5vw;
+}
+
+.nav-tab {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .intro-typewriter {
@@ -45,13 +79,13 @@
 }
 
 #placeholder-1 {
-  height: 28vh;
+  height: 30vh;
 }
 #placeholder-2 {
-  height: 13vh;
+  height: 30vh;
 }
 #placeholder-3 {
-  height: 55vh;
+  height: 50vh;
 }
 
 .projects-slider {
@@ -67,7 +101,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background: rgba(25, 225, 110, 0.5);
+  background: rgba(25, 225, 110, 0.1);
+  border-radius: 40px;
 }
 
 .about-me-slider {
@@ -82,7 +117,8 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  background: rgba(25, 225, 110, 0.5);
+  background: rgba(25, 225, 110, 0.1);
+  border-radius: 40px;
 }
 
 .contact-me {

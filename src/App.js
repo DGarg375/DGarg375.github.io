@@ -12,6 +12,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    console.log(document.getElementById('hello-button'));
+  });
+  useEffect(() => {
     const preloadImages = async () => {
       try {
         const imagePromises = [];
@@ -36,6 +39,7 @@ function App() {
     };
     preloadImages();
   }, []);
+
   if(isLoading || !isImagesLoaded) {
     return <Preloader />
   }
@@ -45,17 +49,23 @@ function App() {
         <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="0" endframe="212"></BackgroundAnimation>
       </div>
       <div class="layout">
+      <div class="navbar-container">
+        <div class="nav-tab"><a href="#projects-section">Projects</a></div>
+        <div class="nav-tab"><a href="#about-section">About Me</a></div>
+        <div class="nav-tab"><a href="#placeholder-3">Contact Me</a></div>
+        <div class="nav-tab"><a href="#contact-section">Resume</a></div>
+      </div>
         <div class="intro-typewriter"><Typewriter texts={typewriterTexts} /></div>
         <div class="placeholder-div" id="placeholder-1"></div>
-        <div class="projects-slider">
+        <div class="projects-slider" id="projects-section">
           <div class="projects-container"></div>
         </div>
         <div class="placeholder-div" id="placeholder-2"></div>
-        <div class="about-me-slider">
+        <div class="about-me-slider" id="about-section">
           <div class="about-me-container"></div>
         </div>
         <div class="placeholder-div" id="placeholder-3"></div>
-        <div class="contact-me"></div>
+        <div class="contact-me" id="contact-section"></div>
       </div>
       <div class="scroll-action"><ScrollAlert /></div>
     </div>
