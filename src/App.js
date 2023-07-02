@@ -49,12 +49,12 @@ function App() {
         <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="0" endframe="212"></BackgroundAnimation>
       </div>
       <div class="layout">
-      <div class="navbar-container">
-        <div class="nav-tab"><a href="#projects-section">Projects</a></div>
-        <div class="nav-tab"><a href="#about-section">About Me</a></div>
-        <div class="nav-tab"><a href="#placeholder-3">Contact Me</a></div>
-        <div class="nav-tab"><a href="#contact-section">Resume</a></div>
-      </div>
+        <div class="navbar-container">
+          <div class="nav-tab"><a href="#projects-section">PROJECTS</a></div>
+          <div class="nav-tab"><a href="#about-section">ABOUT ME</a></div>
+          <div class="nav-tab"><a href="#placeholder-3">CONTACT ME</a></div>
+          <div class="nav-tab"><a href="#contact-section">RESUME</a></div>
+        </div>
         <div class="intro-typewriter"><Typewriter texts={typewriterTexts} /></div>
         <div class="placeholder-div" id="placeholder-1"></div>
         <div class="projects-slider" id="projects-section">
