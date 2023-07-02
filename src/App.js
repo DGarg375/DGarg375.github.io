@@ -51,8 +51,8 @@ function App() {
       <div class="layout">
         <div class="navbar-container">
           <div class="nav-tab"><a href="#projects-section">PROJECTS</a></div>
-          <div class="nav-tab"><a href="#about-section">ABOUT ME</a></div>
-          <div class="nav-tab"><a href="#placeholder-3">CONTACT ME</a></div>
+          <div class="nav-tab"><a href="#about-section">ABOUT</a></div>
+          <div class="nav-tab"><a href="#placeholder-3">CONTACT</a></div>
           <div class="nav-tab"><a href="#contact-section">RESUME</a></div>
         </div>
         <div class="intro-typewriter"><Typewriter texts={typewriterTexts} /></div>
