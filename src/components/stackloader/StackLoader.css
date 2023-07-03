@@ -1,0 +1,36 @@
+.stack-base {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-tray {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    row-gap: 5px;
+    margin-right: 20px;
+}
+
+.project-nav {
+    width: 35%;
+    height: 40%;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.project-nav:hover {
+    background-color: #00c703;
+    cursor: pointer;
+}
+
+.stack-tray {
+    height: 65%;
+}

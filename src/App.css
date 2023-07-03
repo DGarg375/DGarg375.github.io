@@ -14,21 +14,20 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
+.linkActivate {
   text-decoration: none;
   color: #BC13FE;
   width: 100%;
   text-align: center;
 }
 
-a:hover {
+.linkActivate:hover {
   color: #00c703;
   border-bottom: 4px solid #00c703;
-  margin-top: 2px;
   font-weight: 600;
 }
 
-.active-tab a {
+.active-tab .linkActivate {
   color: #00c703;
   border-bottom: 4px solid #00c703;
   font-weight: 600;
@@ -61,7 +60,7 @@ a:hover {
   justify-content: center;
   align-content: center;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   font-family: 'Source Code Pro', monospace;
 }
 
@@ -90,6 +89,10 @@ a:hover {
   }
 }
 
+.intro-typewriter:hover {
+  cursor: default;
+}
+
 #placeholder-1 {
   height: 30vh;
 }
@@ -103,7 +106,7 @@ a:hover {
 .projects-slider {
   height: 215vh;
   width: 100%;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .projects-container {
@@ -115,7 +118,7 @@ a:hover {
   justify-content: flex-end;
   align-items: center;
   /* background: rgba(25, 225, 110, 0.1); */
-  border-radius: 40px;
+  /* pointer-events: none; */
 }
 
 .about-me-slider {

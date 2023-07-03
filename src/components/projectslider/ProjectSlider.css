@@ -1,0 +1,79 @@
+.slider-base {
+    width: 55%;
+    height: 55%;
+    border: 0.15rem solid #F4B942;
+    border-left: 0rem;
+    border-radius: 30px;
+    margin-right: 6%;
+    margin-top: 5%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.img-container {
+    width: 40%;
+    border-radius: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.stack-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+img {
+    width: 100%;
+    height: 107%;
+    object-fit:cover;
+    border-radius: 25px;
+    position: relative;
+}
+
+.overlay-button {
+    padding: 5px;
+    width: 50%;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.overlay-button:hover {
+    color: #BC13FE;
+}
+
+.project-meta-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    color: #F4B942;
+}
+
+.slider-buttons-container {
+    width: 100%;
+    display: flex;
+}
+
+.description-container {
+    height: 60%;
+    padding: 5%;
+    overflow:scroll;
+}
+
+.project-main-heading {
+    height: 15%;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 3%;
+}
