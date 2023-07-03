@@ -24,7 +24,8 @@ a {
 a:hover {
   color: #00c703;
   border-bottom: 4px solid #00c703;
-  /* margin-bottom: 5px; */
+  /* margin-top: 2px; */
+  font-weight: 600;
 }
 
 .scroll-action {
@@ -44,7 +45,7 @@ a:hover {
   height: 50px;
   display: flex;
   justify-content: space-between;
-  margin-top: 3.5vw;
+  margin-top: 37px;
 }
 
 .nav-tab {
@@ -52,8 +53,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 400;
   font-family: 'Source Code Pro', monospace;
 }
 
@@ -150,6 +151,10 @@ a:hover {
         font-size: 3rem;
     }
   }
+
+  .nav-tab {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 838px) {
@@ -171,6 +176,10 @@ a:hover {
       background-color: black;
     }
   }
+
+  .nav-tab {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 530px) {
@@ -191,5 +200,9 @@ a:hover {
     #terminal-sign {
         font-size: 1.5rem;
     }
+  }
+
+  .nav-tab {
+    font-size: 0.6rem;
   }
 }
