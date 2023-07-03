@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer';
+
 import './App.css';
 import { useEffect, useState } from 'react';
 import Preloader from './components/loader/Preloader';
@@ -10,10 +12,12 @@ const typewriterTexts = ["import './DivyanshGargDev';"];
 function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
+    triggerOnce: false });
+  const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
+  const [contactRef, contactInView] = useInView({ threshold: 0.35, triggerOnce: false });
 
-  useEffect(() => {
-    console.log(document.getElementById('hello-button'));
-  });
+  // This useEffect is to preload images
   useEffect(() => {
     const preloadImages = async () => {
       try {
@@ -43,6 +47,7 @@ function App() {
   if(isLoading || !isImagesLoaded) {
     return <Preloader />
   }
+
   return (
     <div className="App">
       <div class="background-animation">
@@ -50,22 +55,22 @@ function App() {
       </div>
       <div class="layout">
         <div class="navbar-container">
-          <div class="nav-tab"><a href="#projects-section">PROJECTS</a></div>
-          <div class="nav-tab"><a href="#about-section">ABOUT</a></div>
-          <div class="nav-tab"><a href="#placeholder-3">CONTACT</a></div>
-          <div class="nav-tab"><a href="#contact-section">RESUME</a></div>
+          <div class={`nav-tab ${projectsInView ? 'active-tab' : ''}`} id="projects-tab"><a href="#projects-section">PROJECTS</a></div>
+          <div class={`nav-tab ${aboutInView ? 'active-tab' : ''}`} id="about-tab"><a href="#about-section">ABOUT</a></div>
+          <div class={`nav-tab ${contactInView ? 'active-tab' : ''}`} id="contact-tab"><a href="#placeholder-3">CONTACT</a></div>
+          <div class="nav-tab" id="resume-tab"><a href="#contact-section">RESUME</a></div>
         </div>
         <div class="intro-typewriter"><Typewriter texts={typewriterTexts} /></div>
         <div class="placeholder-div" id="placeholder-1"></div>
         <div class="projects-slider" id="projects-section">
-          <div class="projects-container"></div>
+          <div ref={projectsRef} class="projects-container"></div>
         </div>
         <div class="placeholder-div" id="placeholder-2"></div>
         <div class="about-me-slider" id="about-section">
-          <div class="about-me-container"></div>
+          <div ref={aboutRef} class="about-me-container"></div>
         </div>
         <div class="placeholder-div" id="placeholder-3"></div>
-        <div class="contact-me" id="contact-section"></div>
+        <div ref={contactRef} class="contact-me" id="contact-section"></div>
       </div>
       <div class="scroll-action"><ScrollAlert /></div>
     </div>
