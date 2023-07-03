@@ -15,7 +15,7 @@ function App() {
   const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
     triggerOnce: false });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
-  const [contactRef, contactInView] = useInView({ threshold: 0.35, triggerOnce: false });
+  const [contactRef, contactInView] = useInView({ threshold: 0.43, triggerOnce: false });
 
   // This useEffect is to preload images
   useEffect(() => {
@@ -58,7 +58,7 @@ function App() {
           <div class={`nav-tab ${projectsInView ? 'active-tab' : ''}`} id="projects-tab"><a href="#projects-section">PROJECTS</a></div>
           <div class={`nav-tab ${aboutInView ? 'active-tab' : ''}`} id="about-tab"><a href="#about-section">ABOUT</a></div>
           <div class={`nav-tab ${contactInView ? 'active-tab' : ''}`} id="contact-tab"><a href="#placeholder-3">CONTACT</a></div>
-          <div class="nav-tab" id="resume-tab"><a href="#contact-section">RESUME</a></div>
+          <div class="nav-tab" id="resume-tab"><a href="https://www.google.com" target="_blank">RESUME</a></div>
         </div>
         <div class="intro-typewriter"><Typewriter texts={typewriterTexts} /></div>
         <div class="placeholder-div" id="placeholder-1"></div>
