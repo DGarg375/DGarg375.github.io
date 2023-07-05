@@ -27,11 +27,27 @@ const ProjectSlider = (props) => {
         } else {
             document.getElementById("next").style.opacity = "1";
         }
+        const handleKeyPress = (e) => {
+            // 39 is the keyCode for the right arrow key
+            if (e.keyCode === 39) {
+                handleButtonClickNext();
+            }
+            // 37 is the keyCode for the left arrow key
+            else if (e.keyCode === 37) {
+                handleButtonClickBack();
+            }
+        };
+        // Adding the event listener on the window object
+        window.addEventListener('keydown', handleKeyPress);
+        // Removing the event listener when the component is unmounted
+        return () => {
+            window.removeEventListener('keydown', handleKeyPress);
+        };
 
     }, [counter, setCounter, numProjects])
 
     return(
-        <div class="slider-base">
+        <div class="slider-base" tabIndex="0">
             <div class="img-container">
                 <img src={props.projects[`project_${counter+1}`].imgSrc} alt={props.projects[`project_${counter+1}`].imgAlt}></img>
                 <div class="stack-container"><StackLoader liveURL={props.projects[`project_${counter+1}`].liveURL} sourceURL={props.projects[`project_${counter+1}`].sourceURL} techStack={props.projects[`project_${counter+1}`].techStack} /></div>
