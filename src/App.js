@@ -48,6 +48,10 @@ function App() {
     preloadImages();
   }, []);
 
+  if(window.innerWidth < 750) {
+    return(<></>)
+  }
+
   if(isLoading || !isImagesLoaded) {
     return <Preloader />
   }
