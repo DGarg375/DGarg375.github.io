@@ -3,11 +3,17 @@
     height: 100%;
     display: flex;
     font-family: 'Source Code Mono', monospace;
+    justify-content: center;
+    align-items: center;
 }
 
 .photo-base {
     width: 40%;
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
 }
 #contact-photo {
     width: 100%;
@@ -16,6 +22,9 @@
 .contact-base-container {
     width: 60%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-title {
@@ -66,6 +75,8 @@
     cursor: pointer;
     color: black;
     border: 2px solid black;
+    margin-left: 250px;
+    margin-top: 20px;
 }
 
 #submit-button:hover {
