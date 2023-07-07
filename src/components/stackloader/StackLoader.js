@@ -18,7 +18,7 @@ const StackLoader = (props) => {
                     </div>
                 )
             } else {
-                return <div>Loading techStack...</div>
+                return <div class="alt-show">Tech Stack Not Available</div>
             }
         }
     }
@@ -26,7 +26,7 @@ const StackLoader = (props) => {
         <div class="stack-base">
             <div class="stack-tray"><WordList techStack={techStack}/></div>
             <div class="button-tray">
-                <button class="project-nav" onClick={() => window.open(liveURL, '_blank')}>Live Site</button>
+                <button class="project-nav" onClick={() => window.open(liveURL, '_blank')} id="live-site">Live Site</button>
                 <button class="project-nav" onClick={() => window.open(sourceURL, '_blank')}>GitHub</button>
             </div>
         </div>

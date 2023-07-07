@@ -59,3 +59,10 @@
     border-radius: 10px;
     border: 0px solid white;
 }
+
+.alt-show {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
