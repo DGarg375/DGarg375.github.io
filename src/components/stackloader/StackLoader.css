@@ -33,4 +33,29 @@
 
 .stack-tray {
     height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-tech {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tech-div {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.hello {
+    border-radius: 10px;
+    border: 0px solid white;
 }
