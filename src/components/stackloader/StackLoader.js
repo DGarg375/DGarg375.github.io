@@ -13,7 +13,7 @@ const StackLoader = (props) => {
                 return(
                     <div class="main-tech">
                         {techStack.map((word, index) => 
-                            <div class="tech-div" id={`tech-div-${index+1}`} key={index}><img class="hello" src={stackImagesURL[word]}></img></div>
+                            <div class="tech-div" id={`tech-div-${index+1}`} key={index} title={word}><img class="hello" src={stackImagesURL[word]}></img></div>
                         )}
                     </div>
                 )
