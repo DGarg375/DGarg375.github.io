@@ -107,7 +107,6 @@ html {
 .projects-slider {
   height: 215vh;
   width: 100%;
-  /* pointer-events: none; */
 }
 
 .projects-container {
@@ -118,14 +117,11 @@ html {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* background: rgba(25, 225, 110, 0.1); */
-  /* pointer-events: none; */
 }
 
 .about-me-slider {
   width: 100%;
   height: 185vh;
-  pointer-events: none;
 }
 
 .about-me-container {
@@ -135,7 +131,6 @@ html {
   height: 100vh;
   display: flex;
   align-items: center;
-  /* background: rgba(25, 225, 110, 0.1); */
   border-radius: 40px;
 }
 

@@ -45,7 +45,7 @@ const ProjectSlider = (props) => {
     return(
         <div class="slider-base" tabIndex="0">
             <div class="img-container">
-                <img src={props.projects[`project_${counter+1}`].imgSrc} alt={props.projects[`project_${counter+1}`].imgAlt}></img>
+                <img id="slider-images" src={props.projects[`project_${counter+1}`].imgSrc} alt={props.projects[`project_${counter+1}`].imgAlt}></img>
                 <div class="stack-container">
                     <StackLoader liveURL={props.projects[`project_${counter+1}`].liveURL} sourceURL={props.projects[`project_${counter+1}`].sourceURL} techStack={props.projects[`project_${counter+1}`].techStack} />
                 </div>

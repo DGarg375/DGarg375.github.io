@@ -7,10 +7,10 @@ import Preloader from './components/loader/Preloader';
 import BackgroundAnimation from './components/backgroundanimation/BackgroundAnimation';
 import Typewriter from './components/typewriter/Typewriter';
 import ProjectSlider from './components/projectslider/ProjectSlider';
+import AboutSlider from './components/aboutslider/AboutSlider';
 import ScrollAlert from './components/scrollalert/ScrollAlert';
 
 const typewriterTexts = ["import './DivyanshGargDev';"];
-const numProjects = projectsBundle.numProjects;
 
 function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
@@ -91,12 +91,14 @@ function App() {
         <div class="placeholder-div" id="placeholder-1"></div>
         <div class="projects-slider" id="projects-section">
           <div ref={projectsRef} class="projects-container">
-            <ProjectSlider numProjects={numProjects} projects={projectsBundle} />
+            <ProjectSlider numProjects={projectsBundle.numProjects} projects={projectsBundle} />
           </div>
         </div>
         <div class="placeholder-div" id="placeholder-2"></div>
         <div class="about-me-slider" id="about-section">
-          <div ref={aboutRef} class="about-me-container"></div>
+          <div ref={aboutRef} class="about-me-container">
+            <AboutSlider />
+          </div>
         </div>
         <div class="placeholder-div" id="placeholder-3"></div>
         <div ref={contactRef} class="contact-me" id="contact-section"></div>

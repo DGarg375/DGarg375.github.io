@@ -29,7 +29,7 @@ export const projectsBundle = {
         "description": "XKCD Explorer is a dynamic web development project that serves as a comprehensive portal for XKCD comics. The platform enables users to search by ID, ensuring easy access to specific entries. It also features a randomizer function, providing a delightful serendipitous discovery expereince for users. Additionally, XKCD Explorer supports sequential browsing, ensuring continuity and ease of navigation through the comic series. A standout feature is the display of each comic's metadata, enriching the user's understanding of the comic's context and creation. XKCD Explorer is a celebration of the iconic webcomic, providing an engaging and intuitive browsing experience for both new readers and long-time fans. With its focused functionalities, this project enhances accessibility and enjoyment of XKCD comics, showcasing the intersection of web development and digital artistry.",
         "liveURL": "",
         "sourceURL": "https://github.com/DGarg375/xkcd-comic-generator",
-        "techStack": ["npm", "html", "css", "javascript", "react", "react-router", "nodejs", "express", "mongodb"],
+        "techStack": ["npm", "html", "css", "javascript", "react", "nodejs", "express"],
     },
     "project_3": {
         "imgSrc": imgSrc[6],
@@ -38,7 +38,7 @@ export const projectsBundle = {
         "description": "This project is a preliminary build for a single-threaded, in-memory database relational database system which includes capturing the data model, a simple SQL-like query interface, to bufferpool management (managing data in-memory). The Data Model stores the schema and instance for every table in columnar form. Bufferpool maintains data in-memory. The Query Interface offers data manipulation and querying capability such as select, insert, update, delete of a single key along with a simple aggregation query, namely, to return the summation of a single column for a range of keys.",
         "liveURL": "",
         "sourceURL": "https://github.com/DGarg375/HTAP-Database",
-        "techStack": ["python", "kubernetes", "docker"],
+        "techStack": ["python", "sql", "docker", "kubernetes"],
     }
 }
 
