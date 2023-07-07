@@ -2,6 +2,7 @@ import { useInView } from 'react-intersection-observer';
 
 import './App.css';
 import { projectsBundle } from './projectMeta';
+import { aboutBundle } from './aboutMeta';
 import { useEffect, useState } from 'react';
 import Preloader from './components/loader/Preloader';
 import BackgroundAnimation from './components/backgroundanimation/BackgroundAnimation';
@@ -97,7 +98,7 @@ function App() {
         <div class="placeholder-div" id="placeholder-2"></div>
         <div class="about-me-slider" id="about-section">
           <div ref={aboutRef} class="about-me-container">
-            <AboutSlider />
+            <AboutSlider numSlides={aboutBundle.numSlides} slides={aboutBundle} />
           </div>
         </div>
         <div class="placeholder-div" id="placeholder-3"></div>

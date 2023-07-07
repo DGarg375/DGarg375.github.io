@@ -35,6 +35,7 @@
     border-radius: 25px;
     position: relative;
     border: 3px solid white;
+    background-color: white;
 }
 
 .overlay-button {
@@ -47,6 +48,13 @@
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
     font-size: 1.5rem;
+}
+
+#back {
+    border-right: 1px solid#F4B942;
+}
+#next {
+    border-left: 1px solid #F4B942;
 }
 
 .overlay-button:hover {
@@ -63,12 +71,14 @@
 .slider-buttons-container {
     width: 100%;
     display: flex;
+    border-bottom: 1px solid #F4B942;
 }
 
 .description-container {
     height: 60%;
     padding: 5%;
     overflow:scroll;
+    border-radius: 30px;
 }
 
 .project-main-heading {
