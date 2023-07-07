@@ -9,6 +9,7 @@ import BackgroundAnimation from './components/backgroundanimation/BackgroundAnim
 import Typewriter from './components/typewriter/Typewriter';
 import ProjectSlider from './components/projectslider/ProjectSlider';
 import AboutSlider from './components/aboutslider/AboutSlider';
+import Contact from './components/contact/Contact';
 import ScrollAlert from './components/scrollalert/ScrollAlert';
 
 const typewriterTexts = ["import './DivyanshGargDev';"];
@@ -102,7 +103,9 @@ function App() {
           </div>
         </div>
         <div class="placeholder-div" id="placeholder-3"></div>
-        <div ref={contactRef} class="contact-me" id="contact-section"></div>
+        <div ref={contactRef} class="contact-me" id="contact-section">
+          <Contact />
+        </div>
       </div>
       <div class="scroll-action">
         <ScrollAlert />
