@@ -1,7 +1,7 @@
 .slider-base {
     width: 55%;
     height: 55%;
-    border: 0.15rem solid #F4B942;
+    border: 0.15rem solid #00c703;
     border-left: 0rem;
     border-radius: 30px;
     margin-right: 6%;
@@ -51,27 +51,27 @@
 }
 
 #back {
-    border-right: 1px solid#F4B942;
+    border-right: 1px solid#00c703;
 }
 #next {
-    border-left: 1px solid #F4B942;
+    border-left: 1px solid #00c703;
 }
 
 .overlay-button:hover {
-    color: #BC13FE;
+    color:#BC13FE;
 }
 
 .project-meta-container {
     width: 60%;
     display: flex;
     flex-direction: column;
-    color: #F4B942;
+    color: white;
 }
 
 .slider-buttons-container {
     width: 100%;
     display: flex;
-    border-bottom: 1px solid #F4B942;
+    border-bottom: 1px solid #00c703;
 }
 
 .description-container {

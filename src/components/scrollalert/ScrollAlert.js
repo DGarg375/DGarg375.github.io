@@ -1,7 +1,6 @@
 import './ScrollAlert.css';
-import React, { useEffect, useState } from 'react';
 
 const ScrollAlert = () => {
-    return <div class="down-arrow"></div>;
+    return <div class="down-arrow" title="Scroll Down"></div>;
   };
 export default ScrollAlert;

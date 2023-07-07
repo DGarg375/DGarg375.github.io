@@ -1,7 +1,7 @@
 .slider-about-base {
     width: 55%;
     height: 55%;
-    border: 0.15rem solid #F4B942;
+    border: 0.15rem solid #00c703;
     border-right: 0rem;
     border-radius: 30px;
     margin-left: 6%;
@@ -16,13 +16,13 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-    color: #F4B942;
+    color: white;
 }
 
 .slider-buttons-about-container {
     width: 100%;
     display: flex;
-    border-bottom: 1px solid #F4B942;
+    border-bottom: 1px solid #00c703;
 }
 
 .overlay-button-about {
@@ -38,10 +38,10 @@
 }
 
 #back-about {
-    border-right:1px solid#F4B942;
+    border-right:1px solid #00c703;
 }
 #next-about {
-    border-left: 1px solid #F4B942;
+    border-left: 1px solid #00c703;
 }
 
 .overlay-button-about:hover {

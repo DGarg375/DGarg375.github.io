@@ -77,7 +77,7 @@ function App() {
             </a>
           </div>
           <div class={`nav-tab ${contactInView ? 'active-tab' : ''}`} id="contact-tab">
-            <a href="#placeholder-3" class="linkActivate">
+            <a href="#contact-section" class="linkActivate">
               CONTACT
             </a>
           </div>
