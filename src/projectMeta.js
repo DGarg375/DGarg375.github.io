@@ -22,7 +22,7 @@ export const projectsBundle = {
         "sourceURL": "https://github.com/DGarg375/SceneAssembler",
         "techStack": ["webgl", "javascript", "css", "html"],
     },
-    "project_3": {
+    "project_4": {
         "imgSrc": imgSrc[1],
         "imgAlt": "xkcd",
         "title": "XKCD Comic Explorer",
@@ -31,11 +31,11 @@ export const projectsBundle = {
         "sourceURL": "https://github.com/DGarg375/xkcd-comic-generator",
         "techStack": ["npm", "html", "css", "javascript", "react", "react-router", "nodejs", "express", "mongodb"],
     },
-    "project_4": {
+    "project_3": {
         "imgSrc": imgSrc[6],
         "imgAlt": "lstore-db",
         "title": "HTAP based on L-Store",
-        "description": "",
+        "description": "This project is a preliminary build for a single-threaded, in-memory database relational database system which includes capturing the data model, a simple SQL-like query interface, to bufferpool management (managing data in-memory). The Data Model stores the schema and instance for every table in columnar form. Bufferpool maintains data in-memory. The Query Interface offers data manipulation and querying capability such as select, insert, update, delete of a single key along with a simple aggregation query, namely, to return the summation of a single column for a range of keys.",
         "liveURL": "",
         "sourceURL": "https://github.com/DGarg375/HTAP-Database",
         "techStack": ["python", "kubernetes", "docker"],
