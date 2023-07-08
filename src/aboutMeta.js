@@ -21,8 +21,8 @@ export const aboutBundle = {
     },
     "slide_4": {
         "imgSrc": "./icons8-dev-windows-11/cert.png",
-        "imgAlt": "courses and certifications",
-        "title": "Courses and Certifications",
+        "imgAlt": "certifications",
+        "title": "Certifications",
         "useComponent": "certif",
     }
 };
