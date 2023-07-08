@@ -4,7 +4,7 @@ const imgSrc = ["https://as2.ftcdn.net/v2/jpg/02/05/66/49/1000_F_205664984_11Yvj
 export const projectsBundle = {
     "numProjects": 4,
 
-    "project_1": {
+    "project_4": {
         "imgSrc": imgSrc[2],
         "imgAlt": "dynamico",
         "title": "Dynamico",
@@ -13,21 +13,21 @@ export const projectsBundle = {
         "sourceURL": "https://github.com/DGarg375/DGarg375.github.io",
         "techStack": ["nodejs", "react", "html", "javascript", "css", "blender", "json", "npm"],
     },
-    "project_2": {
+    "project_1": {
         "imgSrc": imgSrc[0],
         "imgAlt": "sceneloader",
         "title": "JSceneMaster",
         description: "JSceneMaster is a WebGL application aimed at managing and visualizing JSON-based 3D models and scenes. It allows loading, creation, rendering, and display of intricate JSON structures. Key features include vertex display mode for detailed manipulation of specific model points. Users can adjust properties like rotation, sizing, and movement on both entire scenes and individual nodes. The software provides precise control over lighting within the scene, significantly transforming the model's aesthetics. With a focus on user-centric design, JSceneMaster offers a robust and interactive toolset. This platform makes 3D model manipulation accessible and highly customizable, catering to designers, developers, and 3D modeling enthusiasts alike.",
-        "liveURL": "https://dgarg375.github.io/SceneAssembler/",
+        "liveURL": "https://jsonloader.onrender.com/",
         "sourceURL": "https://github.com/DGarg375/SceneAssembler",
         "techStack": ["webgl", "javascript", "css", "html"],
     },
-    "project_4": {
+    "project_2": {
         "imgSrc": imgSrc[1],
         "imgAlt": "xkcd",
         "title": "XKCD Comic Explorer",
         "description": "XKCD Explorer is a dynamic web development project that serves as a comprehensive portal for XKCD comics. The platform enables users to search by ID, ensuring easy access to specific entries. It also features a randomizer function, providing a delightful serendipitous discovery expereince for users. Additionally, XKCD Explorer supports sequential browsing, ensuring continuity and ease of navigation through the comic series. A standout feature is the display of each comic's metadata, enriching the user's understanding of the comic's context and creation. XKCD Explorer is a celebration of the iconic webcomic, providing an engaging and intuitive browsing experience for both new readers and long-time fans. With its focused functionalities, this project enhances accessibility and enjoyment of XKCD comics, showcasing the intersection of web development and digital artistry.",
-        "liveURL": "",
+        "liveURL": "https://xkcdcomics.onrender.com/",
         "sourceURL": "https://github.com/DGarg375/xkcd-comic-generator",
         "techStack": ["npm", "html", "css", "javascript", "react", "nodejs", "express"],
     },
