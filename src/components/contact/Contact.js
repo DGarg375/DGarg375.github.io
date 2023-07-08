@@ -7,6 +7,7 @@ const Contact = () => {
     const [checkSubmit, setCheckSubmit] = useState(false);
     const sendEmail = (e) => {
         e.preventDefault();
+        document.getElementById("submit-button").style.opacity = "0.5";
         emailjs.sendForm('service_00es1si', 'template_s7tj3pn', form.current, 'O5HpIEiDXmz-O2zHr')
         .then((result) => {
             setCheckSubmit(true);
