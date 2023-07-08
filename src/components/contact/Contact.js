@@ -21,10 +21,10 @@ const Contact = () => {
                 <div class="contact-title">Contact Me</div>
                 <div class="contact-form">
                     {checkSubmit ? <><span id="after-submit-text">Thank You! <br></br><br></br>Your message has been sent!</span></> : <form id="contact-form-main" ref={form} onSubmit={sendEmail}>
-                        <input type="text" name="user_name" class="input-class" placeholder="Full Name" /><br></br><br></br>
-                        <input type="email" name="user_email" class="input-class" placeholder="Email" /><br></br><br></br>
-                        <textarea name="message" class="input-class" id="input-message-id" placeholder="Message" /><br></br><br></br>
-                        <input type="submit" value="Send" class="input-class" id="submit-button"></input>
+                        <input type="text" name="from_name" class="input-class" placeholder="Full Name" /><br></br><br></br>
+                        <input type="email" name="user_email" class="input-class" placeholder="Email" required /><br></br><br></br>
+                        <textarea name="message" class="input-class" id="input-message-id" placeholder="Message" required /><br></br><br></br>
+                        <input type="submit" value="Send" class="input-class" id="submit-button" title="gargdivyansh11@gmail.com"></input>
                     </form>}
                 </div>
             </div>

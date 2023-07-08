@@ -10,7 +10,7 @@ const images = [];
 const BackgroundAnimation = (props) => {
     const canvasRef = useRef(null);
     const endFrame = props.endframe;
-    let ball = { frame: 0 };
+    const ball = { frame: 0 };
     const [isLoaded, setIsLoaded] = useState(false);
 
     const currentFrame = (index) => `./frames/Frame (${(index+1).toString()}).jpg`;
