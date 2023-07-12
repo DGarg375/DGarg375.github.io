@@ -20,7 +20,7 @@ function App() {
   const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
     triggerOnce: false });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
-  const [contactRef, contactInView] = useInView({ threshold: 0.43, triggerOnce: false });
+  const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: false });
 
   // This useEffect is to preload images
   useEffect(() => {
