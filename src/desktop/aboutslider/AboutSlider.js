@@ -45,6 +45,9 @@ const AboutSlider = (props) => {
                 <img id="slider-about-images" src={slides[`slide_${slideNumber+1}`].imgSrc} alt={slides[`slide_${slideNumber+1}`].imgAlt}/>
                 <div class="overlay-container"></div>
             </div>
+            <div class="about-slider-label">
+                <div>A</div><div>B</div><div>O</div><div>U</div><div>T</div>
+            </div>
         </div>
     );
 }

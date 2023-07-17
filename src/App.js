@@ -4,13 +4,15 @@ import './App.css';
 import { projectsBundle } from './projectMeta';
 import { aboutBundle } from './aboutMeta';
 import { useEffect, useState } from 'react';
-import Preloader from './components/loader/Preloader';
-import BackgroundAnimation from './components/backgroundanimation/BackgroundAnimation';
-import Typewriter from './components/typewriter/Typewriter';
-import ProjectSlider from './components/projectslider/ProjectSlider';
-import AboutSlider from './components/aboutslider/AboutSlider';
-import Contact from './components/contact/Contact';
-import ScrollAlert from './components/scrollalert/ScrollAlert';
+import Preloader from './desktop/loader/Preloader';
+import BackgroundAnimation from './desktop/backgroundanimation/BackgroundAnimation';
+import Typewriter from './desktop/typewriter/Typewriter';
+import ProjectSlider from './desktop/projectslider/ProjectSlider';
+import AboutSlider from './desktop/aboutslider/AboutSlider';
+import Contact from './desktop/contact/Contact';
+import ScrollAlert from './desktop/scrollalert/ScrollAlert';
+import ProjectSliderMobile from './mobile/projectslidermobile/ProjectSliderMobile';
+import AboutSliderMobile from './mobile/aboutslidermobile/AboutSliderMobile';
 
 const typewriterTexts = ["import './DivyanshGargDev';"];
 
@@ -21,6 +23,10 @@ function App() {
     triggerOnce: false });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
   const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: false });
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ])
 
   // This useEffect is to preload images
   useEffect(() => {
@@ -47,17 +53,25 @@ function App() {
       }
     };
     preloadImages();
+
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight])
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    }
   }, []);
 
-
   // Finish Mobile View
-  if(window.innerWidth < 750) {
+  if(windowSize[0] < 620) {
     return(<></>)
   }
 
-  if(isLoading || !isImagesLoaded) {
-    return <Preloader />
-  }
+  // if(isLoading || !isImagesLoaded) {
+  //   return <Preloader />
+  // }
 
   return (
     <div className="App">
@@ -93,13 +107,13 @@ function App() {
         <div class="placeholder-div" id="placeholder-1"></div>
         <div class="projects-slider" id="projects-section">
           <div ref={projectsRef} class="projects-container">
-            <ProjectSlider numProjects={projectsBundle.numProjects} projects={projectsBundle} />
+            {windowSize[0] < 850 ? <ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} /> : <ProjectSlider numProjects={projectsBundle.numProjects} projects={projectsBundle} />}
           </div>
         </div>
         <div class="placeholder-div" id="placeholder-2"></div>
         <div class="about-me-slider" id="about-section">
           <div ref={aboutRef} class="about-me-container">
-            <AboutSlider numSlides={aboutBundle.numSlides} slides={aboutBundle} />
+            {windowSize[0] < 850 ? <AboutSliderMobile numSlides={aboutBundle.numSlides} slides={aboutBundle} /> : <AboutSlider numSlides={aboutBundle.numSlides} slides={aboutBundle} />}
           </div>
         </div>
         <div class="placeholder-div" id="placeholder-3"></div>

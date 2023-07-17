@@ -27,23 +27,14 @@ const ProjectSlider = (props) => {
         } else {
             document.getElementById("next").style.opacity = "1";
         }
-        const handleKeyPress = (e) => {
-            if (e.keyCode === 39) {
-                handleButtonClickNext();
-            }
-            else if (e.keyCode === 37) {
-                handleButtonClickBack();
-            }
-        };
-        window.addEventListener('keydown', handleKeyPress);
-        return () => {
-            window.removeEventListener('keydown', handleKeyPress);
-        };
 
     }, [counter, setCounter, numProjects])
 
     return(
         <div class="slider-base" tabIndex="0">
+            <div class="slider-label">
+                <div>P</div><div>R</div><div>O</div><div>J</div><div>E</div><div>C</div><div>T</div><div>S</div>
+            </div>
             <div class="img-container">
                 <img id="slider-images" src={props.projects[`project_${counter+1}`].imgSrc} alt={props.projects[`project_${counter+1}`].imgAlt}></img>
                 <div class="stack-container">

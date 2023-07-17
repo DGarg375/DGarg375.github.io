@@ -51,21 +51,19 @@ const BackgroundAnimation = (props) => {
             };
 
             let tl = gsap.timeline();
-            if(canvas.width > 800) {
-                tl.to(ball, {
-                    frame: endFrame-1,
-                    snap: "frame",
-                    ease: "none",
-                    scrollTrigger: {
-                        scrub: true,
-                        pin: "canvas",
-                        end: '500%',
-                    },
-                    onUpdate: render,
-                });
+            tl.to(ball, {
+                frame: endFrame-1,
+                snap: "frame",
+                ease: "none",
+                scrollTrigger: {
+                    scrub: true,
+                    pin: "canvas",
+                    end: '500%',
+                },
+                onUpdate: render,
+            });
 
-                images[ball.frame].onload = render;
-            }
+            images[ball.frame].onload = render;
         }
     }, [isLoaded, endFrame]);
     return (
