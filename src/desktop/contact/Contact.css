@@ -110,3 +110,53 @@ textarea:focus, input:focus{
         font-size: 4rem;
     }
 }
+
+@media screen and (max-width: 620px) {
+    .contact-form {
+        width: 310px;
+        height: 385px;
+    }
+    .input-class {
+        width: 200px;
+        font-size: 15px;
+    }
+    #input-message-id {
+        width: 200px;
+    }
+    #submit-button {
+        margin-left: 190px;
+    }
+    #after-submit-text {
+        font-size: 55px;
+    }
+    .contact-title {
+        font-size: 3rem;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 350px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+{ 
+    .contact-form {
+        width: 310px;
+        height: 385px;
+    }
+    .input-class {
+        width: 200px;
+        font-size: 15px;
+    }
+    #input-message-id {
+        width: 200px;
+    }
+    #submit-button {
+        margin-left: 190px;
+    }
+    #after-submit-text {
+        font-size: 55px;
+    }
+    .contact-title {
+        font-size: 3rem;
+    }
+}
