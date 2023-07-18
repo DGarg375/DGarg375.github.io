@@ -36,7 +36,7 @@ const Contact = () => {
                 <div class="contact-title">Contact Me</div>
                 <div class="contact-form">
                     {checkSubmit ? <div class="back">
-                        <span id="after-submit-text">Thank You!</span>
+                        <span id="after-submit-text"><img alt="thank you" src="./icons8-dev-windows-11/thank-you.png"></img></span>
                     </div> : <div class="front">
                         <form id="contact-form-main" ref={form} onSubmit={sendEmail}>
                             <br></br>

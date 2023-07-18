@@ -14,7 +14,7 @@ html {
   }
 
 #mobile-layout {
-    background-color: black;
+    background-color: rgba(232, 218, 204, 1);
     width: 100%;
 }
 
@@ -26,6 +26,8 @@ html {
 
 .mobile-placeholder {
     height: 5vh;
+    width: 100%;
+    border-top: 8px dotted rgba(255, 87, 51, 1);
 }
 
 .mobile-projects-container {
@@ -47,5 +49,5 @@ html {
 #portfolio-text {
     border-top: 3px solid rgba(255, 87, 51, 1);;
     border-bottom: 3px solid rgba(255, 87, 51, 1);
-    margin-top: 20px;
+    margin-top: 50px;
 }

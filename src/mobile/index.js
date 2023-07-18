@@ -47,6 +47,7 @@ const MobileComponent = () => {
                 <div ref={projectsRef} class="mobile-projects-container" id="projects-section">
                     <ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} />
                 </div>
+                <div class="mobile-placeholder"></div>
                 <div ref={aboutRef} class="mobile-about-container" id="about-section">
                     <AboutSliderMobile numSlides={aboutBundle.numSlides} slides={aboutBundle} />
                 </div>

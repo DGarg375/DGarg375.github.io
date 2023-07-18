@@ -45,6 +45,7 @@
     align-items: center;
     position: relative;
     justify-content: center;
+    background-color: black;
 }
 
 .stack-container {
@@ -60,7 +61,7 @@
     border-radius: 25px;
     position: relative;
     border: 3px solid white;
-    background-color: white;
+    background-color: black;
 }
 
 .overlay-button {

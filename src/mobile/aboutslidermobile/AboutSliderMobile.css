@@ -36,12 +36,11 @@
 .img-base {
     width: 264px;
     height: 380px;
-    margin-top: 5%;
+    border: 3px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: white;
     border-radius: 30px;
 }
 
