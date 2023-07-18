@@ -41,9 +41,10 @@ const MobileComponent = () => {
                 <div class="intro-typewriter" id="intro-typewriter-mobile">
                     <div>DIVYANSH</div>
                     <div>GARG</div>
-                    <div id="portfolio-text">PORTFOLIO</div>
+                    <div id="portfolio-text">Web Developer.<br></br>Software Engineer.</div>
                 </div>
                 <div class="mobile-placeholder"></div>
+                
                 <div ref={projectsRef} class="mobile-projects-container" id="projects-section">
                     <ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} />
                 </div>

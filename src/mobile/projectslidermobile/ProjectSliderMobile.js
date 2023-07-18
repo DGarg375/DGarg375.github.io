@@ -4,30 +4,27 @@ import React, { useState, useEffect } from 'react';
 const ProjectSliderMobile = (props) => {
     const numProjects = props.numProjects;
     const [counter, setCounter] = useState(1);
-    const [toggleDescription, setToggleDescription] = useState(false)
+    const [toggleDescription, setToggleDescription] = useState(false);
+
     const currentProject = props.projects[`project_${counter}`];
     
     const toggleButtonFunction = () => {
-        setToggleDescription(!toggleDescription)
+        setTimeout(() => {
+            setToggleDescription(!toggleDescription)
+        }, 200)
     }
 
     useEffect(() => {
-        console.log(currentProject)
         for(let i = 1; i <= numProjects; ++i) {
             document.getElementById(`PTag_${i}`).addEventListener('click', () => setCounter(i));
         }
-        // document.getElementById('new-img-id3').addEventListener('click', () => {
-
-        // })
     }, []);
 
     useEffect(() => {
         if(toggleDescription) {
-            setTimeout(() => {
-                document.getElementById('description-hide-id').style.display = "flex";
-                document.getElementById('img-base-container').style.display = "none";
-                document.getElementById('placCont').style.display = "block";
-            }, 100);
+            document.getElementById('description-hide-id').style.display = "flex";
+            document.getElementById('img-base-container').style.display = "none";
+            document.getElementById('placCont').style.display = "block";
         } else {
             document.getElementById('description-hide-id').style.display = "none";
             document.getElementById('img-base-container').style.display = "flex";
@@ -36,11 +33,11 @@ const ProjectSliderMobile = (props) => {
     }, [toggleDescription, setToggleDescription])
 
     useEffect(() => {
-        if(counter == 1) {
-            document.getElementById('PTag_1').style.backgroundColor = "rgba(255, 87, 51, 0.8)";
-        }
-        else {
-            document.getElementById('PTag_1').style.background = "transparent";
+        document.getElementById(`PTag_${counter}`).style.backgroundColor = "rgba(255, 87, 51, 0.8)";
+        for(let i = 1; i <= numProjects; ++i) {
+            if(i != counter) {
+                document.getElementById(`PTag_${i}`).style.background="transparent";
+            }
         }
     }, [setCounter, counter]);
 
@@ -81,7 +78,7 @@ const ProjectSliderMobile = (props) => {
                     <div class="description-mobile-text">
                         {currentProject.title}
                     </div>
-                    <div class="go-back-project-button"><button title="Description" class="projectURLButton"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button></div>
+                    <div><button title="Description" class="projectURLButton" id="go-back-project-button"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button></div>
                     <div class="description-mobile-mainbody">
                         {currentProject.description}
                     </div>

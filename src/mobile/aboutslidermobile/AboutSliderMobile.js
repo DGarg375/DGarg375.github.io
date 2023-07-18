@@ -3,55 +3,87 @@ import React, { useState, useEffect } from 'react';
 import CurrentSlide from '../../desktop/aboutslider/slides';
 
 const AboutSliderMobile = (props) => {
-    const numSlides = props.numSlides-1;
-    const [counter, setCounter] = useState(0);
+    const numSlides = props.numSlides;
+    const [counterA, setCounterA] = useState(1);
     const [toggleAbout, setToggleAbout] = useState(false);
-    const handleButtonClickNext = () => {
-        if(counter < numSlides) {
-            setCounter(counter+1);
+
+    const currentSlide = props.slides[`slide_${counterA}`];
+
+    const toggleButtonFunction = () => {
+        setTimeout(() => {
+            setToggleAbout(!toggleAbout);
+        }, 200);
+    }
+
+    useEffect(() => {
+        for(let i = 1; i <= numSlides; ++i) {
+            document.getElementById(`ATag_${i}`).addEventListener('click', () => setCounterA(i));
         }
-    }
-    const handleButtonClickBack = () => {
-        if(counter > 0) {
-            setCounter(counter-1);
+    }, []);
+
+    useEffect(() => {
+        if(toggleAbout) {
+            document.getElementById('description-hide-about-id').style.display = "flex";
+            document.getElementById('img-base-about-container').style.display = "none";
+            document.getElementById('about-placeholder-id').style.display = "block";
+        } else {
+            document.getElementById('description-hide-about-id').style.display = "none";
+            document.getElementById('img-base-about-container').style.display = "flex";
+            document.getElementById('about-placeholder-id').style.display = "none";
         }
-    }
-    const toggleButtonAboutFunction = () => {
-        setToggleAbout(!toggleAbout);
-    }
+    }, [toggleAbout, setToggleAbout])
 
-    // useEffect(() => {
-    //     if(counter === 0) {
-    //         document.getElementById("about-back-mobile").style.opacity = "0.15";
-    //     }
-    //     else {
-    //         document.getElementById("about-back-mobile").style.opacity = "1";
-    //     }
-    //     if(counter === numSlides) {
-    //         document.getElementById("about-next-mobile").style.opacity = "0.15";
-    //     } else {
-    //         document.getElementById("about-next-mobile").style.opacity = "1";
-    //     }
-
-    // }, [counter, setCounter, numSlides])
-
-    // useEffect(() => {
-    //     if(!toggleAbout) {
-    //         document.getElementById("about-description-hide-id").style.display = "none";
-    //         document.getElementById("mobile-stack-container-id").style.display = "block";
-    //     } else {
-    //         document.getElementById("about-description-hide-id").style.display = "flex";
-    //         document.getElementById("mobile-stack-container-id").style.display = "none";
-    //     }
-    // }, [toggleAbout, setToggleAbout])
+    useEffect(() => {
+        document.getElementById(`ATag_${counterA}`).style.backgroundColor = "rgba(255, 87, 51, 0.8)";
+        for(let i = 1; i <= numSlides; ++i) {
+            if(i != counterA) {
+                document.getElementById(`ATag_${i}`).style.background="transparent";
+            }
+        }
+    }, [setCounterA, counterA]);
 
     return (
         <div class="about-slider-base-mobile" tabIndex="0">
-            <div class="img-base">
-                
+
+            <div class="img-base" id="img-base-about-container">
+                <div class="about-index-container">
+                    <br></br>
+                    {
+                        Object.keys(props.slides).map((key, index) => {
+                            if(index !== 0) {
+                                return (
+                                    <button key={key} class="about-index-tag" id={`ATag_${index}`}>{props.slides[`slide_${index}`].title}</button>
+                                )
+                            } else {
+                                return null;
+                            }
+                        })
+                    }
+                    <br></br>
+                </div>
+                <div class="main-container-about-mobile">
+                    <div class="heading-text-about-mobile">
+                        {currentSlide.title}
+                    </div>
+                    <div class="button-tray-about-mobile">
+                        <button title="Description" class="projectURLButton"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-description-64.png" onClick={toggleButtonFunction}></img></button>
+                    </div>
+                </div>
             </div>
+
+            <div class="about-placeholder" id="about-placeholder-id"></div>
+
             <div class="about-slider-label" id="about-slider-label-mobile">
                 <div>A</div><div>B</div><div>O</div><div>U</div><div>T</div>
+            </div>
+            <div class="description-hide" id="description-hide-about-id">
+                    <div class="description-mobile-text">
+                        {currentSlide.title}
+                    </div>
+                    <div><button title="Description" class="projectURLButton" id="go-back-project-button"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button></div>
+                    <div class="description-mobile-mainbody">
+                        <CurrentSlide slideName={currentSlide.useComponent} />
+                    </div>
             </div>
         </div>
     );

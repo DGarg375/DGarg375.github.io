@@ -28,6 +28,7 @@ html {
     height: 20px;
     width: 100%;
     border-top: 8px dotted rgba(255, 87, 51, 1);
+    border-bottom: 8px dotted rgba(255, 87, 51, 1);
 }
 
 .mobile-projects-container {
@@ -41,14 +42,17 @@ html {
 #intro-typewriter-mobile {
     flex-direction: column;
     align-items: flex-start;
-    font-size: 55px;
+    font-size: 60px;
     font-weight: bold;
     padding-left: 5%;
     color: rgba(255, 87, 51, 1);
 }
 #portfolio-text {
-    border-top: 3px solid rgba(255, 87, 51, 1);
-    border-bottom: 3px solid rgba(255, 87, 51, 1);
+    border-top: 3px solid #BC13FE;
+    border-bottom: 3px solid #BC13FE;
     margin-top: 40px;
     padding: 5px;
+    font-size: 24px;
+    width: 70%;
+    color: #BC13FE;
 }
