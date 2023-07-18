@@ -31,6 +31,7 @@ const ProjectSliderMobile = (props) => {
         } else {
             document.getElementById('description-hide-id').style.display = "none";
             document.getElementById('img-base-container').style.display = "flex";
+            document.getElementById('placCont').style.display = "none";
         }
     }, [toggleDescription, setToggleDescription])
 
@@ -80,10 +81,11 @@ const ProjectSliderMobile = (props) => {
                     <div class="description-mobile-text">
                         {currentProject.title}
                     </div>
+                    <div class="go-back-project-button"><button title="Description" class="projectURLButton"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button></div>
                     <div class="description-mobile-mainbody">
                         {currentProject.description}
                     </div>
-                </div>
+            </div>
         </div>
     );
 }
