@@ -34,12 +34,20 @@ const ProjectSliderMobile = (props) => {
     }, [toggleDescription, setToggleDescription])
 
     useEffect(() => {
-        document.getElementById(`PTag_${counter}`).style.backgroundColor = "rgba(255, 87, 51, 0.8)";
+        document.getElementById(`PTag_${counter}`).style.backgroundColor = "rgba(255, 87, 51, 0.9)";
+        document.getElementById(`PTag_${counter}`).style.width = "125%";
+        document.getElementById(`PTag_${counter}`).style.borderRight="1.5px solid black";
+        document.getElementById(`PTag_${counter}`).style.borderRadius="0px 5px 5px 0px";
         for(let i = 1; i <= numProjects; ++i) {
             if(i != counter) {
                 document.getElementById(`PTag_${i}`).style.background="transparent";
+                document.getElementById(`PTag_${i}`).style.width="100%";
+                document.getElementById(`PTag_${i}`).style.borderRadius="0px";
+                document.getElementById(`PTag_${i}`).style.borderRight="0";
+
             }
         }
+        
     }, [setCounter, counter]);
 
     return(

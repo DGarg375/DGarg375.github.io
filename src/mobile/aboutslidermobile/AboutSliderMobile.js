@@ -35,10 +35,16 @@ const AboutSliderMobile = (props) => {
     }, [toggleAbout, setToggleAbout])
 
     useEffect(() => {
-        document.getElementById(`ATag_${counterA}`).style.backgroundColor = "rgba(255, 87, 51, 0.8)";
+        document.getElementById(`ATag_${counterA}`).style.backgroundColor = "rgba(255, 87, 51, 0.9)";
+        document.getElementById(`ATag_${counterA}`).style.width = "125%";
+        document.getElementById(`ATag_${counterA}`).style.borderRight="1.5px solid black";
+        document.getElementById(`ATag_${counterA}`).style.borderRadius="0px 5px 5px 0px";
         for(let i = 1; i <= numSlides; ++i) {
             if(i != counterA) {
                 document.getElementById(`ATag_${i}`).style.background="transparent";
+                document.getElementById(`ATag_${i}`).style.width="100%";
+                document.getElementById(`ATag_${i}`).style.borderRadius="0px";
+                document.getElementById(`ATag_${i}`).style.borderRight="0";
             }
         }
     }, [setCounterA, counterA]);
@@ -47,7 +53,7 @@ const AboutSliderMobile = (props) => {
         <div class="about-slider-base-mobile" tabIndex="0">
 
             <div class="img-base" id="img-base-about-container">
-                <div class="about-index-container">
+                <div class="about-index-container" id="hellothere">
                     <br></br>
                     {
                         Object.keys(props.slides).map((key, index) => {
@@ -75,7 +81,7 @@ const AboutSliderMobile = (props) => {
             <div class="about-placeholder" id="about-placeholder-id"></div>
 
             <div class="about-slider-label" id="about-slider-label-mobile">
-                <div>A</div><div>B</div><div>O</div><div>U</div><div>T</div>
+                <div>A</div><div>B</div><div>O</div><div>U</div><div>T</div><br></br><div>M</div><div>E</div>
             </div>
             <div class="description-hide" id="description-hide-about-id">
                     <div class="description-mobile-text">

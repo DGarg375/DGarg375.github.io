@@ -25,7 +25,7 @@ html {
 }
 
 .mobile-placeholder {
-    height: 20px;
+    height: 30px;
     width: 100%;
     border-top: 8px dotted rgba(255, 87, 51, 1);
     border-bottom: 8px dotted rgba(255, 87, 51, 1);
