@@ -168,3 +168,20 @@ html {
     font-size: 1rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .intro-typewriter {
+    padding: 0;
+    margin: 0;
+    .typed-text {
+      font-size: 0.6rem;
+      border: 1.5px solid black;
+    }
+    .cursor {
+      font-size: 1rem;
+    }
+    #terminal-sign {
+      font-size: 1rem;
+    }
+  }
+}

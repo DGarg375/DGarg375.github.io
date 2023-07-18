@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+#mobile-layout {
+    background-color: black;
+    width: 100%;
+}
+
+#mobile-navbar {
+    .nav-tab {
+        font-size: 0.8rem;
+    }
+}
+
+.mobile-placeholder {
+    height: 5vh;
+}
+
+.mobile-projects-container {
+    height: 100vh;
+}
+
+.mobile-about-container {
+    height: 100vh;
+}
+
+.mobile-contact-me {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(232, 218, 204, 1);
+    display: flex;
+    justify-content: center;
+    .contact-form {
+        width: 310px;
+        height: 385px;
+    }
+    .input-class {
+        width: 200px;
+        font-size: 15px;
+    }
+    #input-message-id {
+        width: 200px;
+    }
+    #submit-button {
+        margin-left: 190px;
+    }
+    #after-submit-text {
+        font-size: 55px;
+    }
+}

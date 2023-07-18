@@ -47,10 +47,6 @@
     position: relative;
 }
 
-.back {
-    text-align: center;
-}
-
 .contact-form-main {
     height: 400px;
     width: 557px;
@@ -105,7 +101,8 @@ textarea:focus, input:focus{
     color: rgba(255, 87, 51, 1);
 }
 .back {
-    margin: 20px;
+    margin: 10px;
+    text-align: center;
 }
 
 .topbutton {

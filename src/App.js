@@ -12,6 +12,7 @@ import AboutSlider from './desktop/aboutslider/AboutSlider';
 import Contact from './desktop/contact/Contact';
 import ProjectSliderMobile from './mobile/projectslidermobile/ProjectSliderMobile';
 import AboutSliderMobile from './mobile/aboutslidermobile/AboutSliderMobile';
+import MobileComponent from './mobile/index';
 import ScrollAlert from './desktop/scrollalert/ScrollAlert';
 
 const typewriterTexts = ["import './DivyanshGargDev';"];
@@ -66,12 +67,12 @@ function App() {
 
   // Finish Mobile View
   if(windowSize[0] < 620) {
-    return(<></>)
+    return(<MobileComponent />)
   }
 
-  // if(isLoading || !isImagesLoaded) {
-  //   return <Preloader />
-  // }
+  if(isLoading || !isImagesLoaded) {
+    return <Preloader />
+  }
 
   return (
     <div className="App">
