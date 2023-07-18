@@ -37,14 +37,14 @@ const AboutSliderMobile = (props) => {
     useEffect(() => {
         document.getElementById(`ATag_${counterA}`).style.backgroundColor = "rgba(255, 87, 51, 0.9)";
         document.getElementById(`ATag_${counterA}`).style.width = "125%";
-        document.getElementById(`ATag_${counterA}`).style.borderRight="1.5px solid black";
-        document.getElementById(`ATag_${counterA}`).style.borderRadius="0px 5px 5px 0px";
+        document.getElementById(`ATag_${counterA}`).style.borderLeft="1.5px solid black";
+        document.getElementById(`ATag_${counterA}`).style.borderRadius="5px 0px 0px 5px";
         for(let i = 1; i <= numSlides; ++i) {
             if(i != counterA) {
                 document.getElementById(`ATag_${i}`).style.background="transparent";
                 document.getElementById(`ATag_${i}`).style.width="100%";
                 document.getElementById(`ATag_${i}`).style.borderRadius="0px";
-                document.getElementById(`ATag_${i}`).style.borderRight="0";
+                document.getElementById(`ATag_${i}`).style.borderLeft="0";
             }
         }
     }, [setCounterA, counterA]);
