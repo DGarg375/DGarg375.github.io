@@ -167,6 +167,12 @@ html {
   .nav-tab {
     font-size: 1rem;
   }
+  .projects-container {
+    justify-content: center;
+  }
+  .about-me-container {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -174,14 +180,14 @@ html {
     padding: 0;
     margin: 0;
     .typed-text {
-      font-size: 0.6rem;
+      font-size: 1rem;
       border: 1.5px solid black;
     }
     .cursor {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
     #terminal-sign {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
 }

@@ -8,8 +8,6 @@ import Contact from '../desktop/contact/Contact';
 import { projectsBundle } from '../projectMeta';
 import { aboutBundle } from '../aboutMeta';
 
-const typewriterTexts = ["import './DivyanshGargDev';"];
-
 const MobileComponent = () => {
     const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
         triggerOnce: false });
@@ -41,7 +39,9 @@ const MobileComponent = () => {
                     </div>
                 </div>
                 <div class="intro-typewriter" id="intro-typewriter-mobile">
-                    <Typewriter texts={typewriterTexts} />
+                    <div>DIVYANSH</div>
+                    <div>GARG'S</div>
+                    <div id="portfolio-text">PORTFOLIO</div>
                 </div>
                 <div class="mobile-placeholder"></div>
                 <div ref={projectsRef} class="mobile-projects-container" id="projects-section">

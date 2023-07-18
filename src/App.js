@@ -108,13 +108,13 @@ function App() {
         <div class="placeholder-div" id="placeholder-1"></div>
         <div class="projects-slider" id="projects-section">
           <div ref={projectsRef} class="projects-container">
-            {windowSize[0] < 850 ? <ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} /> : <ProjectSlider numProjects={projectsBundle.numProjects} projects={projectsBundle} />}
+            {windowSize[0] < 610 ? <ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} /> : <ProjectSlider numProjects={projectsBundle.numProjects} projects={projectsBundle} />}
           </div>
         </div>
         <div class="placeholder-div" id="placeholder-2"></div>
         <div class="about-me-slider" id="about-section">
           <div ref={aboutRef} class="about-me-container">
-            {windowSize[0] < 850 ? <AboutSliderMobile numSlides={aboutBundle.numSlides} slides={aboutBundle} /> : <AboutSlider numSlides={aboutBundle.numSlides} slides={aboutBundle} />}
+            {windowSize[0] < 610 ? <AboutSliderMobile numSlides={aboutBundle.numSlides} slides={aboutBundle} /> : <AboutSlider numSlides={aboutBundle.numSlides} slides={aboutBundle} />}
           </div>
         </div>
         <div class="placeholder-div" id="placeholder-3"></div>

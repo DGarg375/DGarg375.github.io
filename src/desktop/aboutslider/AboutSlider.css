@@ -6,6 +6,7 @@
     border-right: 0rem;
     border-radius: 30px;
     margin-left: 6%;
+    margin-right: 6%;
     margin-top: 5%;
     color: white;
     display: flex;
@@ -97,4 +98,14 @@
     font-size: 25px;
     color: black;
     font-weight: bold;
+}
+
+@media screen and (max-width: 850px) {
+    .slider-about-base {
+        width: 550px;
+        height: 320px;
+    }
+    .about-slider-label {
+        height: 320px;
+    }
 }

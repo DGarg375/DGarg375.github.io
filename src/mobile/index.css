@@ -35,31 +35,17 @@ html {
 .mobile-about-container {
     height: 100vh;
 }
-/* 
-.mobile-contact-me {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(232, 218, 204, 1);
-    display: flex;
-    justify-content: center;
-    .contact-form {
-        width: 310px;
-        height: 385px;
-    }
-    .input-class {
-        width: 200px;
-        font-size: 15px;
-    }
-    #input-message-id {
-        width: 200px;
-    }
-    #submit-button {
-        margin-left: 190px;
-    }
-    #after-submit-text {
-        font-size: 55px;
-    }
-    .contact-title {
-        font-size: 3rem;
-    }
-} */
+
+#intro-typewriter-mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 55px;
+    font-weight: bold;
+    padding-left: 5%;
+    color: rgba(255, 87, 51, 1);
+}
+#portfolio-text {
+    border-top: 3px solid rgba(255, 87, 51, 1);;
+    border-bottom: 3px solid rgba(255, 87, 51, 1);
+    margin-top: 20px;
+}

@@ -4,9 +4,8 @@ import React, { useEffect, useState } from 'react';
 const ScrollAlert = () => {
     const [isEndOfScroll, setIsEndOfScroll] = useState(false);
     const handleScroll = () => {
-      const isAtEnd = document.getElementById('contact-section');
-      if(isAtEnd) {
-        const targetElement = document.getElementById('contact-section');
+      const targetElement = document.getElementById('contact-section');
+      if(targetElement) {
         const targetPosition = targetElement.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         setIsEndOfScroll(targetPosition <= windowHeight);
