@@ -33,7 +33,7 @@ const Contact = () => {
         <div class="contact-main">
             {windowSize[0] < 940 ? <></> : <div class="photo-base"><img id="contact-photo" src="./icons8-dev-windows-11/contact-us.png" alt="man saying contact me"></img></div>}
             <div class="contact-base-container">
-                <div class="contact-title">Contact Me</div>
+                <div class="contact-title" id="contact-title-id">Contact Me</div>
                 <div class="contact-form">
                     {checkSubmit ? <div class="back">
                         <span id="after-submit-text"><img alt="thank you" src="./icons8-dev-windows-11/thank-you.png"></img></span>
