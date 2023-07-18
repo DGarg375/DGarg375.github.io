@@ -26,8 +26,8 @@ const StackLoader = (props) => {
         <div class="stack-base">
             <div class="stack-tray"><WordList techStack={techStack}/></div>
             <div class="button-tray">
-                <button class="project-nav" onClick={() => window.open(liveURL, '_blank')} id="live-site">Live Site</button>
-                <button class="project-nav" onClick={() => window.open(sourceURL, '_blank')}>GitHub</button>
+                <button class="project-nav" onClick={() => window.open(sourceURL, '_blank')} id="live-site"><img class="button-css" id="new-img-id" src="./icons8-dev-windows-11/icons8-github-60.png"></img></button>
+                <button class="project-nav" onClick={() => window.open(liveURL, '_blank')}><img class="button-css" id="new-img-id2" src="./icons8-dev-windows-11/icons8-website-60.png"></img></button>
             </div>
         </div>
     );

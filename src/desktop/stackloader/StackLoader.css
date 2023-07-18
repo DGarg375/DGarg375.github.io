@@ -8,19 +8,17 @@
 
 .button-tray {
     display: flex;
-    flex-direction: column;
-    height: 25%;
     justify-content: flex-end;
     align-items: flex-end;
-    row-gap: 5px;
+    column-gap: 15px;
     margin-right: 20px;
 }
 
 .project-nav {
-    width: 45%;
-    height: 45%;
+    width: 60px;
+    height: 60px;
     color: white;
-    background-color: black;
+    background-color: rgba(255, 87, 51, 1);
     border: 0;
     border-radius: 15px;
     font-size: 15px;

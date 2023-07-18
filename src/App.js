@@ -10,9 +10,9 @@ import Typewriter from './desktop/typewriter/Typewriter';
 import ProjectSlider from './desktop/projectslider/ProjectSlider';
 import AboutSlider from './desktop/aboutslider/AboutSlider';
 import Contact from './desktop/contact/Contact';
-import ScrollAlert from './desktop/scrollalert/ScrollAlert';
 import ProjectSliderMobile from './mobile/projectslidermobile/ProjectSliderMobile';
 import AboutSliderMobile from './mobile/aboutslidermobile/AboutSliderMobile';
+import ScrollAlert from './desktop/scrollalert/ScrollAlert';
 
 const typewriterTexts = ["import './DivyanshGargDev';"];
 
