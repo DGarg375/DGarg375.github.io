@@ -25,7 +25,7 @@ html {
 }
 
 .mobile-placeholder {
-    height: 5vh;
+    height: 20px;
     width: 100%;
     border-top: 8px dotted rgba(255, 87, 51, 1);
 }
@@ -47,7 +47,8 @@ html {
     color: rgba(255, 87, 51, 1);
 }
 #portfolio-text {
-    border-top: 3px solid rgba(255, 87, 51, 1);;
+    border-top: 3px solid rgba(255, 87, 51, 1);
     border-bottom: 3px solid rgba(255, 87, 51, 1);
-    margin-top: 50px;
+    margin-top: 40px;
+    padding: 5px;
 }

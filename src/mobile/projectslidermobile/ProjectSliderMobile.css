@@ -20,14 +20,106 @@
 }
 
 .main-container-project-mobile {
-    width: 90%;
+    width: 70%;
     height: 100%;
     border-radius: 30px 0px 0px 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .project-index-container {
-    width: 10%;
+    width: 30%;
     height: 100%;
-    background-color: rgba(255, 87, 51, 1);
-    border-radius: 0px 30px 30px 0px;
+    border-radius: 0px 25px 25px 0px;
+    border-left: 4px dotted black;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(255, 87, 51, 0.5); */
+}
+
+.project-index-tag {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: transparent;
+    border: 0;
+    margin-bottom: 10px;
+    height: 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    font-weight: bold;
+    padding-left: 5px;
+    text-align: left;
+    color: black;
+}
+.project-index-tag:hover {
+    background-color: rgba(255, 87, 51, 0.8);
+    border-bottom: 1.5px solid black;
+    border-top: 1.5px solid black;
+}
+
+.heading-text-project-mobile {
+    height: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    overflow-wrap:break-word;
+    padding-left: 10px;
+    color: black;
+}
+
+.button-tray-project-mobile {
+    height: 51%;
+    width: 100%;
+    border-top: 4px dotted black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.projectURLButton {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 3px dashed black;
+    border-radius: 10px;
+}
+.projectURLButton:hover {
+    background-color: rgba(255, 87, 51, 0.8);
+    border: 0;
+}
+
+.button-css {
+    width: 40px;
+}
+
+.description-hide{
+    position: absolute;
+    width: 265px;
+    height: 380px;
+    border-radius: 30px;
+    background-color: rgba(255, 87, 51, 0.5);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    margin-left: 29.5px;
+    border: 3px solid black;
+}
+
+.description-mobile-text {
+ height: 30%;
+}
+.description-mobile-mainbody {
+    height: 70%;
+}
+.placeholder-img-base-container {
+    width: 265px;
+    height: 380px;
+    display: none;
 }
