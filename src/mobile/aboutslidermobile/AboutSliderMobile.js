@@ -26,6 +26,7 @@ const AboutSliderMobile = (props) => {
             document.getElementById('description-hide-about-id').style.display = "flex";
             document.getElementById('img-base-about-container').style.display = "none";
             document.getElementById('about-placeholder-id').style.display = "block";
+            document.getElementById('description-about-mobile-mainbody-id').scrollTop = 0;
         } else {
             document.getElementById('description-hide-about-id').style.display = "none";
             document.getElementById('img-base-about-container').style.display = "flex";
@@ -81,7 +82,7 @@ const AboutSliderMobile = (props) => {
                         {currentSlide.title}
                     </div>
                     <div><button title="Description" class="projectURLButton" id="go-back-project-button"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button></div>
-                    <div class="description-mobile-mainbody">
+                    <div class="description-mobile-mainbody" id="description-about-mobile-mainbody-id">
                         <CurrentSlide slideName={currentSlide.useComponent} />
                     </div>
             </div>

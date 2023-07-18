@@ -25,6 +25,7 @@ const ProjectSliderMobile = (props) => {
             document.getElementById('description-hide-id').style.display = "flex";
             document.getElementById('img-base-container').style.display = "none";
             document.getElementById('placCont').style.display = "block";
+            document.getElementById('description-mobile-mainbody-id').scrollTop = 0;
         } else {
             document.getElementById('description-hide-id').style.display = "none";
             document.getElementById('img-base-container').style.display = "flex";
@@ -79,7 +80,7 @@ const ProjectSliderMobile = (props) => {
                         {currentProject.title}
                     </div>
                     <div><button title="Description" class="projectURLButton" id="go-back-project-button"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button></div>
-                    <div class="description-mobile-mainbody">
+                    <div class="description-mobile-mainbody" id="description-mobile-mainbody-id">
                         {currentProject.description}
                     </div>
             </div>
