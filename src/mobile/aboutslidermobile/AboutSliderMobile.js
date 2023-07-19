@@ -47,12 +47,27 @@ const AboutSliderMobile = (props) => {
                 document.getElementById(`ATag_${i}`).style.borderLeft="0";
             }
         }
+        if(counterA != 1) {
+            document.getElementById('layout-help-about-id').style.display = "none";
+        }
     }, [setCounterA, counterA]);
 
     return (
         <div class="about-slider-base-mobile" tabIndex="0">
 
             <div class="img-base" id="img-base-about-container">
+                <div class="layout-help-about" id="layout-help-about-id">
+                    <div class="relative-class">
+                    <div class="index-layout-container-about">
+                        <span id="index-about-arrow">USE THIS INDEX TO NAVIGATE THROUGH SLIDES</span>
+                            <div class="help-arrows" id="arrow-index-about"></div>
+                        </div>
+                    </div>
+                    <div class="description-layout-container-about">
+                        <span id="desc-about-arrow">DESCRIPTION</span>
+                        <div class="help-arrows" id="arrow-description-about"></div>
+                    </div>
+                </div>
                 <div class="about-index-container" id="hellothere">
                     <br></br>
                     {

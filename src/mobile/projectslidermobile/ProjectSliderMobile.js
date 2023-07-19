@@ -39,15 +39,16 @@ const ProjectSliderMobile = (props) => {
         document.getElementById(`PTag_${counter}`).style.borderRight="1.5px solid black";
         document.getElementById(`PTag_${counter}`).style.borderRadius="0px 5px 5px 0px";
         for(let i = 1; i <= numProjects; ++i) {
-            if(i != counter) {
+            if(i !== counter) {
                 document.getElementById(`PTag_${i}`).style.background="transparent";
                 document.getElementById(`PTag_${i}`).style.width="100%";
                 document.getElementById(`PTag_${i}`).style.borderRadius="0px";
                 document.getElementById(`PTag_${i}`).style.borderRight="0";
-
             }
         }
-        
+        if(counter != 1) {
+            document.getElementById('layout-help-projects-id').style.display = "none";
+        }
     }, [setCounter, counter]);
 
     return(

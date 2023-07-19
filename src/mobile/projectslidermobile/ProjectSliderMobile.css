@@ -150,16 +150,6 @@
     display: none;
 }
 
-@media screen and (max-width: 850px) {
-    .slider-base {
-        width: 550px;
-        height: 320px;
-    }
-    .slider-label {
-        height: 320px;
-    }
-}
-
 .layout-help-projects {
     position: absolute;
     height: 100%;
@@ -213,8 +203,8 @@
     width: 100px;
     height: 60px;
     border-radius: 0px 10px 0px 0px;
-    border-top: 2px solid rgba(255, 87, 51, 1);
-    border-right: 2px solid rgba(255, 87, 51, 1);
+    border-top: 2px dashed rgba(255, 87, 51, 1);
+    border-right: 2px dashed rgba(255, 87, 51, 1);
     margin-top: 20px;
     margin-left: 5px;
 
@@ -222,13 +212,13 @@
 #arrow-description {
     width: 45px;
     height: 30px;
-    border-left: 2px solid rgba(255, 87, 51, 1);
+    border-left: 2px dashed rgba(255, 87, 51, 1);
     margin-left: 20px;
 }
 #arrow-git {
     width: 45px;
     height: 30px;
-    border-right: 2px solid rgba(255, 87, 51, 1);
+    border-right: 2px dashed rgba(255, 87, 51, 1);
     display: flex;
     align-items: flex-end;
     margin-left: 25px;
@@ -236,8 +226,8 @@
 #arrow-live {
     width: 35px;
     height: 100px;
-    border-top: 2px solid rgba(255, 87, 51, 1);
-    border-right: 2px solid rgba(255, 87, 51, 1);
+    border-top: 2px dashed rgba(255, 87, 51, 1);
+    border-right: 2px dashed rgba(255, 87, 51, 1);
     border-radius:0px 10px 0px 0px;
     margin-top: 7px;
 }
@@ -246,11 +236,20 @@
     /* margin-left: 10px; */
     width: 120px;
 }
-#desc-project-arrow {
-}
+
 #git-project-arrow {
     margin-left: 10px;
 }
 #live-project-arrow {
     margin-right: 10px;
+}
+
+@media screen and (max-width: 850px) {
+    .slider-base {
+        width: 550px;
+        height: 320px;
+    }
+    .slider-label {
+        height: 320px;
+    }
 }
