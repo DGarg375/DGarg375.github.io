@@ -26,12 +26,12 @@ const AboutSliderMobile = (props) => {
             document.getElementById('description-hide-about-id').style.display = "flex";
             document.getElementById('img-base-about-container').style.display = "none";
             document.getElementById('about-placeholder-id').style.display = "block";
-            document.getElementById('description-about-mobile-mainbody-id').scrollTop = 0;
         } else {
             document.getElementById('description-hide-about-id').style.display = "none";
             document.getElementById('img-base-about-container').style.display = "flex";
             document.getElementById('about-placeholder-id').style.display = "none";
         }
+        document.getElementById('description-about-mobile-mainbody-id').scrollTop = 0;
     }, [toggleAbout, setToggleAbout])
 
     useEffect(() => {
