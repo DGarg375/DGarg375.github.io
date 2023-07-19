@@ -25,12 +25,10 @@ const ProjectSliderMobile = (props) => {
             document.getElementById('description-hide-id').style.display = "flex";
             document.getElementById('img-base-container').style.display = "none";
             document.getElementById('placCont').style.display = "block";
-            document.getElementById('layout-help-projects-id').style.display = "none";
         } else {
             document.getElementById('description-hide-id').style.display = "none";
             document.getElementById('img-base-container').style.display = "flex";
             document.getElementById('placCont').style.display = "none";
-            document.getElementById('layout-help-projects-id').style.display = "block";
         }
         document.getElementById('description-mobile-mainbody-id').scrollTop = 0;
     }, [toggleDescription, setToggleDescription])
@@ -59,6 +57,26 @@ const ProjectSliderMobile = (props) => {
             </div>
             <div class="placeholder-img-base-container" id="placCont"></div>
             <div class="img-base" id="img-base-container">
+                <div class="layout-help-projects" id="layout-help-projects-id">
+                    <div class="relative-class">
+                        <div class="index-layout-container">
+                            <span id="index-project-arrow">USE THIS INDEX TO NAVIGATE THROUGH PROJECTS</span>
+                            <div class="help-arrows" id="arrow-index"></div>
+                        </div>
+                        <div class="description-layout-container">
+                            <span id="desc-project-arrow">DESCRIPTION</span>
+                            <div class="help-arrows" id="arrow-description"></div>
+                        </div>
+                        <div class="github-layout-container">
+                            <span id="git-project-arrow">SOURCE CODE</span>
+                            <div class="help-arrows" id="arrow-git"></div>
+                        </div>
+                        <div class="live-layout-container">
+                            <span id="live-project-arrow">WEBSITE</span>
+                            <div class="help-arrows" id="arrow-live"></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="main-container-project-mobile">
                     <div class="heading-text-project-mobile">
                         {currentProject.title}
@@ -93,28 +111,6 @@ const ProjectSliderMobile = (props) => {
                     <div class="description-mobile-mainbody" id="description-mobile-mainbody-id">
                         {currentProject.description}
                     </div>
-            </div>
-            <div class="layout-help-projects" id="layout-help-projects-id">
-                <div class="relative-class">
-                    <div class="index-layout-container">
-                        <span id="index-project-arrow">PROJECT INDEX</span>
-                        <div class="help-arrows" id="arrow-index"></div>
-                    </div>
-                    <div class="description-layout-container">
-                        <span id="desc-project-arrow">DESCRIPTION</span>
-                        <div class="help-arrows" id="arrow-description"></div>
-                    </div>
-                    <div class="github-layout-container">
-                        <div class="help-arrows" id="arrow-git">
-                            <span id="git-project-arrow">SOURCE CODE</span>
-                        </div>
-                    </div>
-                    <div class="live-layout-container">
-                        <div class="help-arrows" id="arrow-live">
-                            <span id="live-project-arrow">WEBSITE</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );

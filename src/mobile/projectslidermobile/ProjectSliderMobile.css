@@ -162,12 +162,14 @@
 
 .layout-help-projects {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     pointer-events: none;
     color: rgba(255, 87, 51, 1);
     font-weight: bold;
     font-size: 12px;
+    /* background-color: rgba(232, 218, 204, 0.8); */
+    border-radius: 30px;
 }
 
 .relative-class {
@@ -179,63 +181,70 @@
 }
 
 .index-layout-container {
-    margin-left: 145px;
-    margin-top: 145px;  
-    position: absolute; 
+    margin-left: -5px;
+    margin-top: -70px;
+    position: absolute;
+    display: flex;
 }
 .description-layout-container {
     display: flex;
-    flex-direction: column-reverse;
-    margin-left: 62px;
-    margin-top: 535px;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 195px;
     row-gap: 5px;
     position: absolute;
 }
 .github-layout-container {
     position: absolute;
-    margin-top: 535px;
-    margin-left: 45px;
+    margin-top: 315px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 5px;
 }
 .live-layout-container {
     position: absolute;
-    margin-top: 535px;
-    margin-left: 220px;
+    margin-top: 138px;
+    margin-left: 55px;
+    display: flex;
 }
 
 #arrow-index {
-    width: 150px;
-    height: 70px;
+    width: 100px;
+    height: 60px;
     border-radius: 0px 10px 0px 0px;
     border-top: 2px solid rgba(255, 87, 51, 1);
     border-right: 2px solid rgba(255, 87, 51, 1);
+    margin-top: 20px;
+    margin-left: 5px;
+
 }
 #arrow-description {
     width: 45px;
-    height: 100px;
-    border-right: 2px solid rgba(255, 87, 51, 1);
+    height: 30px;
+    border-left: 2px solid rgba(255, 87, 51, 1);
+    margin-left: 20px;
 }
 #arrow-git {
-    width: 120px;
-    height: 160px;
+    width: 45px;
+    height: 30px;
     border-right: 2px solid rgba(255, 87, 51, 1);
-    border-bottom: 2px solid rgba(255, 87, 51, 1);
-    border-radius:0px 0px 10px 0px;
     display: flex;
     align-items: flex-end;
+    margin-left: 25px;
 }
 #arrow-live {
-    width: 80px;
-    height: 110px;
-    border-left: 2px solid rgba(255, 87, 51, 1);
-    border-bottom: 2px solid rgba(255, 87, 51, 1);
-    border-radius:0px 0px 0px 10px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    width: 35px;
+    height: 100px;
+    border-top: 2px solid rgba(255, 87, 51, 1);
+    border-right: 2px solid rgba(255, 87, 51, 1);
+    border-radius:0px 10px 0px 0px;
+    margin-top: 7px;
 }
 
 #index-project-arrow {
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    width: 120px;
 }
 #desc-project-arrow {
 }
