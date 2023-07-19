@@ -11,10 +11,13 @@ const Contact = () => {
       ]);
     const sendEmail = (e) => {
         e.preventDefault();
+        document.getElementById('contact-form-main-id').style.boxShadow = "none";
         document.getElementById("submit-button").style.opacity = "0.5";
         emailjs.sendForm('service_00es1si', 'template_s7tj3pn', form.current, 'O5HpIEiDXmz-O2zHr')
         .then((result) => {
-            setCheckSubmit(true);
+            setTimeout(() => {
+                setCheckSubmit(true);
+            }, 0);
         }, (error) => {
             alert("Cannot connect to server. Plase try again!");
         })
@@ -34,9 +37,9 @@ const Contact = () => {
             {windowSize[0] < 940 ? <></> : <div class="photo-base"><img id="contact-photo" src="./icons8-dev-windows-11/contact-us.png" alt="man saying contact me"></img></div>}
             <div class="contact-base-container">
                 <div class="contact-title" id="contact-title-id">Contact Me</div>
-                <div class="contact-form">
+                <div class="contact-form" id="contact-form-main-id">
                     {checkSubmit ? <div class="back">
-                        <span id="after-submit-text"><img alt="thank you" src="./icons8-dev-windows-11/thank-you.png"></img></span>
+                        <span id="after-submit-text"><img id="thank-you-sticker" alt="thank you" src="./icons8-dev-windows-11/thank-you.png"></img></span>
                     </div> : <div class="front">
                         <form id="contact-form-main" ref={form} onSubmit={sendEmail}>
                             <br></br>
