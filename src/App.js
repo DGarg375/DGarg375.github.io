@@ -15,7 +15,7 @@ import AboutSliderMobile from './mobile/aboutslidermobile/AboutSliderMobile';
 import MobileComponent from './mobile/index';
 import ScrollAlert from './desktop/scrollalert/ScrollAlert';
 
-const typewriterTexts = ["import './DivyanshGargDev';"];
+const typewriterTexts = ["DIVYANSH GARG"];
 
 function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);

@@ -20,8 +20,8 @@
 
 .typewriter-text {
     white-space: pre;
-    letter-spacing: 5px;
-    overflow:scroll;
+    letter-spacing: 10px;
+    overflow:auto;
 }
 
 #terminal-sign {

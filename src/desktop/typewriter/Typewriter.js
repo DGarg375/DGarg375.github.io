@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Typewriter.css';
 
-const Typewriter = ({ texts, typingDelay = 100, erasingDelay = 50, delay = 1500, terminalSign = '>' }) => {
+const Typewriter = ({ texts, typingDelay = 150, terminalSign = '$' }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -17,29 +17,8 @@ const Typewriter = ({ texts, typingDelay = 100, erasingDelay = 50, delay = 1500,
         if (textIndex <= texts[currentTextIndex].length) {
           setDisplayText(texts[currentTextIndex].substring(0, textIndex));
           textIndex++;
-        } else {
-          clearInterval(typingInterval);
-          setTimeout(startErasing, delay);
         }
       }, typingDelay);
-    };
-
-    const startErasing = () => {
-      let textIndex = texts[currentTextIndex].length;
-      setIsTyping(true);
-
-      const erasingInterval = setInterval(() => {
-        if (textIndex >= 0) {
-          setDisplayText(texts[currentTextIndex].substring(0, textIndex));
-          textIndex--;
-        } else {
-          clearInterval(erasingInterval);
-          setCurrentTextIndex((prevIndex) =>
-            (prevIndex + 1) % texts.length
-          );
-          setTimeout(startTyping, delay);
-        }
-      }, erasingDelay);
     };
 
     startTyping();
@@ -47,7 +26,7 @@ const Typewriter = ({ texts, typingDelay = 100, erasingDelay = 50, delay = 1500,
     return () => {
       clearTimeout(timerId);
     };
-  }, [texts, typingDelay, erasingDelay, delay, currentTextIndex]);
+  }, [texts, typingDelay, currentTextIndex]);
 
   return (
     <div className="typed-text">
