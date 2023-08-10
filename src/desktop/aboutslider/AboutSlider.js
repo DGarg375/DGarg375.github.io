@@ -46,7 +46,7 @@ const AboutSlider = (props) => {
                 <div class="overlay-container"></div>
             </div>
             <div class="about-slider-label">
-                <div>A</div><div>B</div><div>O</div><div>U</div><div>T</div>
+                <div>A</div><div>B</div><div>O</div><div>U</div><div>T</div><br></br><div>M</div><div>E</div>
             </div>
         </div>
     );

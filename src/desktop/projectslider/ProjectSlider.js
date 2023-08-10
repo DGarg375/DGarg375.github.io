@@ -36,7 +36,7 @@ const ProjectSlider = (props) => {
                 <div>P</div><div>R</div><div>O</div><div>J</div><div>E</div><div>C</div><div>T</div><div>S</div>
             </div>
             <div class="img-container">
-                <img id="slider-images" src={props.projects[`project_${counter+1}`].imgSrc} alt={props.projects[`project_${counter+1}`].imgAlt}></img>
+                <div id="slider-images"></div>
                 <div class="stack-container">
                     <StackLoader liveURL={props.projects[`project_${counter+1}`].liveURL} sourceURL={props.projects[`project_${counter+1}`].sourceURL} techStack={props.projects[`project_${counter+1}`].techStack} />
                 </div>
