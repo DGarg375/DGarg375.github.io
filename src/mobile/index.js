@@ -7,7 +7,7 @@ import Contact from '../desktop/contact/Contact';
 import { projectsBundle } from '../projectMeta';
 import { aboutBundle } from '../aboutMeta';
 
-// Comment was added for git testing
+// Comment changed for testing
 
 const MobileComponent = () => {
     const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
