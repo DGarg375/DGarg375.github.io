@@ -45,6 +45,7 @@ function App() {
         }
         setImages(images);
         setIsImagesLoaded(true);
+        console.log(isImagesLoaded);
       } catch(error) {
         console.error('Error preloading images:', error);
       }
