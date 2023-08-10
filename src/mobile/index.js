@@ -1,6 +1,5 @@
 import './index.css';
 import { useInView } from 'react-intersection-observer';
-import Typewriter from '../desktop/typewriter/Typewriter';
 import ScrollAlert from '../desktop/scrollalert/ScrollAlert';
 import ProjectSliderMobile from './projectslidermobile/ProjectSliderMobile';
 import AboutSliderMobile from './aboutslidermobile/AboutSliderMobile';
@@ -11,8 +10,8 @@ import { aboutBundle } from '../aboutMeta';
 const MobileComponent = () => {
     const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
         triggerOnce: false });
-      const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
-      const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: false });
+    const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
+    const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: false });
     return(
         <div className="App">
             <div class="layout" id="mobile-layout">
