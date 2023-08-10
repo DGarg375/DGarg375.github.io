@@ -47,7 +47,7 @@ function App() {
         setIsImagesLoaded(true);
         setTimeout(() => {
           setLoader(false);
-        }, 10000);
+        }, 5000);
       } catch(error) {
         console.error('Error preloading images:', error);
       }
