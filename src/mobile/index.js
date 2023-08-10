@@ -40,8 +40,8 @@ const MobileComponent = () => {
                     </div>
                 </div>
                 <div class="intro-typewriter" id="intro-typewriter-mobile">
-                    <div>DIVYANSH</div>
-                    <div>GARG</div>
+                    <div>Divyansh</div>
+                    <div>Garg</div>
                     <div id="portfolio-text">Web Developer.<br></br>Software Engineer.</div>
                 </div>
                 <div class="mobile-placeholder"></div>
