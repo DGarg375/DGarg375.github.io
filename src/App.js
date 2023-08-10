@@ -19,7 +19,7 @@ const typewriterTexts = ["DIVYANSH GARG"];
 
 function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [images, setImages] = useState([new Image()]);
   const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
     triggerOnce: false });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
@@ -33,23 +33,18 @@ function App() {
   useEffect(() => {
     const preloadImages = async () => {
       try {
-        const imagePromises = [];
-        for(let i = 0; i < 212; i++) {
+        for(let i = 0; i < 213; i++) {
           const img = new Image();
           img.src = `./frames/Frame (${(i + 1).toString()}).jpg`;
-          imagePromises.push(
-            new Promise((resolve, reject) => {
-              img.onload = resolve;
-              img.onerror = reject;
-            })
-          );
+          await new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+          });
+          images.push(img);
         }
-        await Promise.all(imagePromises);
+        setImages(images);
         setIsImagesLoaded(true);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 5000);
-      } catch (error) {
+      } catch(error) {
         console.error('Error preloading images:', error);
       }
     };
@@ -69,15 +64,11 @@ function App() {
   if(windowSize[0] < 620) {
     return(<MobileComponent />)
   }
-
-  if(isLoading || !isImagesLoaded) {
-    return <Preloader />
-  }
-
+  
   return (
     <div className="App">
       <div class="background-animation">
-        <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="0" endframe="212"></BackgroundAnimation>
+        <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="0" endframe="213" images={images}></BackgroundAnimation>
       </div>
       <div class="layout">
         <div class="navbar-container">
