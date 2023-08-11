@@ -45,9 +45,6 @@ function App() {
         }
         setImages(images);
         setIsImagesLoaded(true);
-        setTimeout(() => {
-          setLoader(false);
-        }, 10000);
       } catch(error) {
         console.error('Error preloading images:', error);
       }
@@ -59,6 +56,11 @@ function App() {
     };
 
     window.addEventListener('resize', handleWindowResize);
+
+    setTimeout(() => {
+      setLoader(false);
+    }, 10000);
+
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     }
