@@ -21,7 +21,10 @@ const Typewriter = ({ texts, typingDelay = 150, terminalSign = '$' }) => {
       }, typingDelay);
     };
 
-    startTyping();
+    setTimeout(() => {
+      startTyping();
+    }, 2500);
+    // startTyping();
 
     return () => {
       clearTimeout(timerId);

@@ -12,7 +12,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 5px;
 }
 
 .loading-bar {
@@ -26,13 +25,15 @@
 
 .loading-progress {
   max-width: 100%;
-  width: 0px;
+  min-width: 4.8px;
   height: 100%;
   background-color: rgba(255, 87, 51, 0.8);
   border-radius: 8px;
 }
 
 .loading-text {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 550px;
 }

@@ -2,22 +2,48 @@ import './Preloader.css';
 import React, { useState, useEffect } from 'react';
 
 const Preloader = props => {
-    const [progress, setProgress] = useState(9.6);
-    const loadingBar = document.getElementById("loading-progress-id");
-    if(progress <= 720 && loadingBar) {
+    const [progress, setProgress] = useState(0);
+    useEffect(() => {
+        const loadingProgress = document.getElementById("loading-progress-id");
+        if(loadingProgress) {
+            const startTime = performance.now();
+            const endTime = startTime + 20000;
+            const startWidth = 0;
+            const endWidth = 720;
+            function updateProgress(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progressPercentage = (elapsedTime/20000) * 100;
+                const currentWidth = (progressPercentage/100) * endWidth;
+                setProgress(currentWidth);
+                if(currentTime < endTime) {
+                    requestAnimationFrame(updateProgress);
+                }
+            }
+            requestAnimationFrame(updateProgress);
+        }
         setTimeout(() => {
-            setProgress(progress+4.8);
-            loadingBar.style.width = `${progress}px`;
-        }, 100);
-    }
-    console.log(progress)
+            document.getElementById("loading-text-id").innerText = "LOADING ANIMATION FILES";
+        }, 2000);
+        setTimeout(() => {
+            document.getElementById("loading-text-id").innerText = "GENERATING IMAGES";
+        }, 7000);
+        setTimeout(() => {
+            document.getElementById("loading-text-id").innerText = "ALMOST THERE...";
+        }, 15000);
+        setTimeout(() => {
+            document.getElementById("loading-text-id").innerText = "DONE";
+        }, 19000);
+    }, []);
+    const loadingProgressStyle = {
+        width: `${progress}px`,
+    };
     return(
     <div class="loader-background">
         <div class="loader-container">
-            <div class="loading-text">Loading background animation...</div>
             <div class="loading-bar" id="loading-bar-id">
-                <div class="loading-progress" id="loading-progress-id"></div>
+                <div class="loading-progress" id="loading-progress-id" style={loadingProgressStyle}></div>
             </div>
+            <div class="loading-text" id="loading-text-id">. . .</div>
         </div>
     </div>);
 };
