@@ -45,7 +45,9 @@ function App() {
         }
         setImages(images);
         setIsImagesLoaded(true);
-        console.log(isImagesLoaded);
+        setTimeout(() => {
+          setLoader(false);
+        }, 10000);
       } catch(error) {
         console.error('Error preloading images:', error);
       }
@@ -66,7 +68,7 @@ function App() {
   if(windowSize[0] < 620) {
     return(<MobileComponent />)
   }
-  if(!isImagesLoaded) {
+  if(!isImagesLoaded || loader) {
     return <Preloader />
   }
 
