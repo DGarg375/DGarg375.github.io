@@ -59,7 +59,7 @@ function App() {
 
     setTimeout(() => {
       setLoader(false);
-    }, 10000);
+    }, 15000);
 
     return () => {
       window.removeEventListener('resize', handleWindowResize);
@@ -68,7 +68,7 @@ function App() {
 
   // Finish Mobile View
   if(windowSize[0] < 620) {
-    return(<MobileComponent />)
+    return <MobileComponent />
   }
   if(!isImagesLoaded && loader) {
     return <Preloader />
