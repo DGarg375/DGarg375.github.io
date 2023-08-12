@@ -37,7 +37,7 @@ function App() {
   useEffect(() => {
     const preloadImages = async () => {
       try {
-        for(let i = 0; i < 213; i++) {
+        for(let i = 1; i < 212; i++) {
           const img = new Image();
           img.src = `./frames/Frame (${(i + 1).toString()}).jpg`;
           await new Promise((resolve, reject) => {
@@ -81,7 +81,7 @@ function App() {
   return (
       <div className="App">
         <div class="background-animation">
-          <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="0" endframe="213" images={images}></BackgroundAnimation>
+          <BackgroundAnimation width={window.innerWidth} height={window.innerHeight} startframe="1" endframe="212" images={images}></BackgroundAnimation>
         </div>
         <div class="layout">
           <div class="navbar-container">
