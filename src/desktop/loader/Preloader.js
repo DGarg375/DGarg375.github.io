@@ -23,18 +23,19 @@ const Preloader = props => {
             }
             requestAnimationFrame(updateProgress);
         }
-        if(loadingProgText) {
+        if(loadingProgText && loadingProgress) {
             setTimeout(() => {
-                document.getElementById("loading-text-id").innerText = "LOADING ANIMATION FILES";
+                loadingProgText.innerText = "LOADING ANIMATION FILES.";
             }, 2000);
             setTimeout(() => {
-                document.getElementById("loading-text-id").innerText = "GENERATING IMAGES";
+                loadingProgText.innerText = "GENERATING IMAGES.";
             }, 7000);
             setTimeout(() => {
-                document.getElementById("loading-text-id").innerText = "ALMOST THERE...";
+                loadingProgText.innerText = "ALMOST THERE.";
+                // loadingProgress.style.backgroundColor = "rgba(0, 199, 3, 0.8)";
             }, 15000);
             setTimeout(() => {
-                document.getElementById("loading-text-id").innerText = "DONE";
+                loadingProgText.innerText = "DONE.";
             }, 19500);
         }
     }, []);
@@ -47,7 +48,7 @@ const Preloader = props => {
             <div class="loading-bar" id="loading-bar-id">
                 <div class="loading-progress" id="loading-progress-id" style={loadingProgressStyle}></div>
             </div>
-            <div class="loading-text" id="loading-text-id">. . .</div>
+            <div class="loading-text" id="loading-text-id">LOADING APPLICATION</div>
         </div>
     </div>);
 };

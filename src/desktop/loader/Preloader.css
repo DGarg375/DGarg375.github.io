@@ -27,13 +27,17 @@
   max-width: 100%;
   min-width: 4.8px;
   height: 100%;
-  background-color: rgba(255, 87, 51, 0.8);
+  background-color: rgba(0,0,0,0.7);
   border-radius: 8px;
+  transition: background-color 2s;
 }
 
 .loading-text {
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: bold;
   position: absolute;
   margin-top: 200px;
-  margin-left: 550px;
+  margin-left: 500px;
+  transition: color 0.5s;
+  color: rgba(0,0,0,0.8);
 }
