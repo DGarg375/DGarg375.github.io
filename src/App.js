@@ -17,10 +17,13 @@ import ScrollAlert from './desktop/scrollalert/ScrollAlert';
 
 const typewriterTexts = ["Divyansh Garg"];
 
+const firstBackgroundImage = new Image();
+firstBackgroundImage.src = `./frames/Frame (1).jpg`;
+
 function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
   const [loader, setLoader] = useState(true);
-  const [images, setImages] = useState([new Image()]);
+  const [images, setImages] = useState([firstBackgroundImage]);
   const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
     triggerOnce: false });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
@@ -70,7 +73,7 @@ function App() {
   if(windowSize[0] < 620) {
     return <MobileComponent />
   }
-  if(!isImagesLoaded || loader) {
+  if(!isImagesLoaded && loader) {
     return <Preloader />
   }
   // return <Preloader />

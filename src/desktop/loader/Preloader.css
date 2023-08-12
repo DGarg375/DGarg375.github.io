@@ -27,7 +27,7 @@
   max-width: 100%;
   min-width: 4.8px;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   border-radius: 8px;
   transition: background-color 2s;
 }
@@ -36,8 +36,8 @@
   font-size: 15px;
   font-weight: bold;
   position: absolute;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-left: 500px;
   transition: color 0.5s;
-  color: rgba(0,0,0,0.8);
+  color: rgba(0,0,0,0.5);
 }
