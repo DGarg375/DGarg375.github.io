@@ -70,7 +70,7 @@ function App() {
   if(windowSize[0] < 620) {
     return <MobileComponent />
   }
-  if(!isImagesLoaded && loader) {
+  if(!isImagesLoaded || loader) {
     return <Preloader />
   }
   // return <Preloader />
