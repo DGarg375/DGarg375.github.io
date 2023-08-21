@@ -121,10 +121,11 @@ html {
 .projects-container {
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 70%;
   height: 100vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-left: 30%;
   align-items: center;
 }
 
@@ -137,10 +138,12 @@ html {
 .about-me-container {
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 70%;
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-right: 30%;
   border-radius: 40px;
 }
 
@@ -150,6 +153,66 @@ html {
   background-color: rgba(232, 218, 204, 1);
   display: flex;
   justify-content: center;
+}
+
+.desktop-projects {
+  .img-base {
+    border: 3px solid white;
+  }
+  .project-index-container {
+    border-left: 2px solid white;
+  }
+  .project-index-tag {
+    border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
+    border-right: 1.5px solid white;
+    color: white;
+  }
+  .heading-text-project-mobile {
+    color: white;
+  }
+  .button-tray-project-mobile {
+    border-top: 3px dotted white;
+  }
+  .projectURLButton {
+    border: 0;
+  }
+  .projectURLButton:hover {
+    border: 3px dashed white;
+  }
+  .description-hide {
+    color: white;
+    border: 3px solid white;
+  }
+}
+
+.desktop-abouts {
+  .img-base {
+    border: 3px solid white;
+  }
+  .about-index-container {
+    border-right: 2px solid white;
+  }
+  .about-index-tag {
+    border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
+    color: white;
+  }
+  .heading-text-about-mobile {
+    color: white;
+  }
+  .button-tray-about-mobile {
+    border-top: 3px dotted white;
+  }
+  .projectURLButton:hover {
+    border: 3px dashed white;
+  }
+  .about-slider-base-mobile {
+    #description-hide-about-id {
+      color: white;
+      border: 3px solid white;
+    }
+  }
 }
 
 @media screen and (max-width: 850px) {
