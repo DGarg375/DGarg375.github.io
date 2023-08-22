@@ -12,15 +12,17 @@ export const projectsBundle = {
         "liveURL": "https://dgarg375.github.io",
         "sourceURL": "https://github.com/DGarg375/DGarg375.github.io",
         "techStack": ["nodejs", "react", "html", "javascript", "css", "blender", "json", "npm"],
+        "photoGallery": "https://drive.google.com/drive/u/0/folders/1RWRVg23hQgI2JKeEykxIAIq3Bc9Jv6eO",
     },
     "project_1": {
         "imgSrc": imgSrc[0],
         "imgAlt": "sceneloader",
         "title": "JSceneMaster",
-        description: "JSceneMaster is a WebGL application aimed at managing and visualizing JSON-based 3D models and scenes. It allows loading, creation, rendering, and display of intricate JSON structures. Key features include vertex display mode for detailed manipulation of specific model points. Users can adjust properties like rotation, sizing, and movement on both entire scenes and individual nodes. The software provides precise control over lighting within the scene, significantly transforming the model's aesthetics. With a focus on user-centric design, JSceneMaster offers a robust and interactive toolset. This platform makes 3D model manipulation accessible and highly customizable, catering to designers, developers, and 3D modeling enthusiasts alike.",
+        "description": "JSceneMaster is a WebGL application aimed at managing and visualizing JSON-based 3D models and scenes. It allows loading, creation, rendering, and display of intricate JSON structures. Key features include vertex display mode for detailed manipulation of specific model points. Users can adjust properties like rotation, sizing, and movement on both entire scenes and individual nodes. The software provides precise control over lighting within the scene, significantly transforming the model's aesthetics. With a focus on user-centric design, JSceneMaster offers a robust and interactive toolset. This platform makes 3D model manipulation accessible and highly customizable, catering to designers, developers, and 3D modeling enthusiasts alike.",
         "liveURL": "https://jsonloader.onrender.com/",
         "sourceURL": "https://github.com/DGarg375/SceneAssembler",
         "techStack": ["webgl", "javascript", "css", "html"],
+        "photoGallery": "https://drive.google.com/drive/u/0/folders/1ZCs6xA36MlvZx-IrOrkecHz69yFSPEG2",
     },
     "project_2": {
         "imgSrc": imgSrc[1],
@@ -30,6 +32,7 @@ export const projectsBundle = {
         "liveURL": "https://xkcdcomics.onrender.com/",
         "sourceURL": "https://github.com/DGarg375/xkcd-comic-generator",
         "techStack": ["npm", "html", "css", "javascript", "react", "nodejs", "express"],
+        "photoGallery": "https://drive.google.com/drive/u/0/folders/17mpn-XaePbQZIXcn95sb2SER4Ak7WGPJ",
     },
     "project_3": {
         "imgSrc": imgSrc[6],

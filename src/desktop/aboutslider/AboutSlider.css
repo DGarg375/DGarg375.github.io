@@ -78,7 +78,7 @@
 #slider-about-images {
     width: 100%;
     height: 102%;
-    object-fit: cover;
+    object-fit:cover;
     border-radius: 25px;
     position: relative;
     border: 3px solid white;

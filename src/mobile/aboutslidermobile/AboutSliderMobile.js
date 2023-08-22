@@ -85,7 +85,7 @@ const AboutSliderMobile = (props) => {
                 </div>
                 <div class="main-container-about-mobile">
                     <div class="heading-text-about-mobile">
-                        {currentSlide.title}
+                        {currentSlide.title == "Divyansh Garg" ? <img src={currentSlide.imgSrc}  id="profile-image"></img> : currentSlide.title}
                     </div>
                     <div class="button-tray-about-mobile">
                         <button title="Description" class="projectURLButton"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-description-64.png" onClick={toggleButtonFunction}></img></button>

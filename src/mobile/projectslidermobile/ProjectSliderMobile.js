@@ -108,7 +108,9 @@ const ProjectSliderMobile = (props) => {
                     <div class="description-mobile-text">
                         {currentProject.title}
                     </div>
-                    <div><button title="Description" class="projectURLButton" id="go-back-project-button"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button></div>
+                    <div class="gallery-button"><button title="Description" class="projectURLButton" id="go-back-project-button"><img class="button-css" id="new-img-id3" src="./icons8-dev-windows-11/icons8-left-arrow-50.png" onClick={toggleButtonFunction}></img></button>{currentProject.photoGallery ? <button class="projectURLButton"><a href={currentProject.photoGallery} target="_blank" rel="noreferrer" id="photo-gallery-button"> 
+                    Photo Gallery
+              </a></button>:<></>}</div>
                     <div class="description-mobile-mainbody" id="description-mobile-mainbody-id">
                         {currentProject.description}
                     </div>
