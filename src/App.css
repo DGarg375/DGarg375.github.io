@@ -104,7 +104,54 @@ html {
 
 #placeholder-1 {
   height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(255, 87, 51, 1);
+  border-color: black;
 }
+
+.roles-container {
+  border-top: 3px solid rgba(255, 87, 51, 1);
+  border-bottom: 3px solid rgba(255, 87, 51, 1);
+  padding: 13px;
+}
+
+.change-text {
+  
+}
+
+.plcHlrActive .roles-container {
+  animation: fadeInFromNone 2s ease-out forwards, changeBorder 2.5s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: block;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes changeBorder {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 130%;
+  }
+}
+
 #placeholder-2 {
   height: 30vh;
 }
@@ -127,6 +174,11 @@ html {
   justify-content: center;
   margin-left: 30%;
   align-items: center;
+  opacity:0;
+}
+
+.projectsActive .projects-container {
+  animation: fadeInFromNone 0.75s ease-out forwards;
 }
 
 .about-me-slider {
@@ -145,6 +197,11 @@ html {
   justify-content: center;
   margin-right: 30%;
   border-radius: 40px;
+  opacity:0;
+}
+
+.aboutActive .about-me-container {
+  animation: fadeInFromNone 0.75s ease-out forwards;
 }
 
 .contact-me {
