@@ -26,6 +26,7 @@ function App() {
   const [images, setImages] = useState([firstBackgroundImage]);
   const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
     triggerOnce: false });
+  const [placeholderOneRef, placeholderOneInView] = useInView({ threshold: 0.35, triggerOnce: false });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
   const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: false });
   const [windowSize, setWindowSize] = useState([
@@ -121,14 +122,19 @@ function App() {
           <div class="intro-typewriter">
             <Typewriter texts={typewriterTexts} />
           </div>
-          <div class="placeholder-div" id="placeholder-1"></div>
-          <div class="projects-slider" id="projects-section">
+          <div ref={placeholderOneRef} class={`${placeholderOneInView?'plcHlrActive':''} placeholder-div`} id="placeholder-1">
+	    <div class="roles-container">
+              <div class="change-text">WEB DEVELOPER.</div>
+	      <div class="change-text">SOFTWARE ENGINEER.</div>
+            </div>
+	  </div>
+          <div class={`projects-slider ${projectsInView?'projectsActive':''}`} id="projects-section">
             <div ref={projectsRef} class="projects-container">
               {windowSize[0] < 610 ? <ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} /> : <div class="desktop-projects"><ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} /></div>}
             </div>
           </div>
           <div class="placeholder-div" id="placeholder-2"></div>
-          <div class="about-me-slider" id="about-section">
+          <div class={`about-me-slider ${aboutInView?'aboutActive':''}`} id="about-section">
             <div ref={aboutRef} class="about-me-container">
               {windowSize[0] < 610 ? <AboutSliderMobile numSlides={aboutBundle.numSlides} slides={aboutBundle} /> : <div class="desktop-abouts"><AboutSliderMobile numSlides={aboutBundle.numSlides} slides={aboutBundle} /></div>}
             </div>
