@@ -56,6 +56,7 @@ html {
     font-size: 24px;
     width: 70%;
     color: #BC13FE;
+    animation: changeWidth 2s ease-out forwards;
 }
 
 .mobile-projects-container {
@@ -64,7 +65,7 @@ html {
 
 .container-animation {
     opacity: 0;
-    animation: fadeAnimation 0.75s ease-in forwards;
+    animation: fadeAnimation 0.5s ease-out forwards;
 }
 
 @keyframes fadeAnimation {
@@ -73,6 +74,14 @@ html {
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes changeWidth {
+    0% {
+        width: 50%;
+    }
+    100% {
+        width: 80%;
     }
 }
 
