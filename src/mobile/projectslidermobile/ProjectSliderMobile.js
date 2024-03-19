@@ -9,9 +9,7 @@ const ProjectSliderMobile = (props) => {
     const currentProject = props.projects[`project_${counter}`];
     
     const toggleButtonFunction = () => {
-        setTimeout(() => {
-            setToggleDescription(!toggleDescription)
-        }, 200)
+        setToggleDescription(!toggleDescription);
     }
 
     useEffect(() => {
