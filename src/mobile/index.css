@@ -49,14 +49,14 @@ html {
     color: rgba(255, 87, 51, 1);
 }
 #portfolio-text {
-    border-top: 3px solid #BC13FE;
-    border-bottom: 3px solid #BC13FE;
+    border-top: 3px solid rgba(255, 87, 51, 1);
+    border-bottom: 3px solid rgba(255, 87, 51, 1);
     margin-top: 40px;
     padding: 5px;
     font-size: 24px;
     width: 70%;
-    color: #BC13FE;
-    animation: changeWidth 2s ease-out forwards;
+    color: rgba(255, 87, 51, 1);
+    animation: portfolioAnimation 3s ease-out forwards;
 }
 
 .mobile-projects-container {
@@ -76,12 +76,15 @@ html {
         opacity: 1;
     }
 }
-@keyframes changeWidth {
+@keyframes portfolioAnimation {
     0% {
-        width: 50%;
+        padding-left: 0px;
     }
     100% {
-        width: 80%;
+        width: 94%;
+        padding-left: 25px;
+        border-color: #BC13FE;
+        color: #BC13FE;
     }
 }
 
