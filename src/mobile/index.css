@@ -37,6 +37,7 @@ html {
 
 .mobile-about-container {
     height: 100vh;
+    opacity: 0;
 }
 
 #intro-typewriter-mobile {
@@ -55,4 +56,35 @@ html {
     font-size: 24px;
     width: 70%;
     color: #BC13FE;
+    animation: changeWidth 2s ease-out forwards;
+}
+
+.mobile-projects-container {
+    opacity: 0;
+}
+
+.container-animation {
+    opacity: 0;
+    animation: fadeAnimation 0.5s ease-out forwards;
+}
+
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes changeWidth {
+    0% {
+        width: 50%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.contact-me-anim {
+    opacity: 0;
 }
