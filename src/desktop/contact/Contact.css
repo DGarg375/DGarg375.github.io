@@ -46,7 +46,12 @@
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     position: relative;
-    transition: 3s;
+    transition: 1s;
+}
+
+.contact-form:hover {
+    box-shadow: rgba(255, 87, 51, 0.56) 0px 22px 70px 4px;
+    transition: 1s;
 }
 
 .contact-form-main {

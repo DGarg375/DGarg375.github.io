@@ -11,9 +11,9 @@ import { aboutBundle } from '../aboutMeta';
 
 const MobileComponent = () => {
     const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
-        triggerOnce: false });
-    const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
-    const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: false });
+        triggerOnce: true });
+    const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: true });
+    const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: true });
     return(
         <div className="App">
             <div class="layout" id="mobile-layout">
@@ -46,15 +46,15 @@ const MobileComponent = () => {
                 </div>
                 <div class="mobile-placeholder"></div>
                 
-                <div ref={projectsRef} class="mobile-projects-container" id="projects-section">
+                <div ref={projectsRef} class={`mobile-projects-container ${projectsInView?'container-animation':''}`} id="projects-section">
                     <ProjectSliderMobile numProjects={projectsBundle.numProjects} projects={projectsBundle} />
                 </div>
                 <div class="mobile-placeholder"></div>
-                <div ref={aboutRef} class="mobile-about-container" id="about-section">
+                <div ref={aboutRef} class={`mobile-about-container ${aboutInView?'container-animation':''}`} id="about-section">
                     <AboutSliderMobile numSlides={aboutBundle.numSlides} slides={aboutBundle} />
                 </div>
                 <div class="mobile-placeholder"></div>
-                <div ref={contactRef} class="contact-me" id="contact-section">
+                <div ref={contactRef} class={`contact-me contact-me-anim ${contactInView?'container-animation':''}`} id="contact-section">
                     <Contact />
                 </div>
             </div>
