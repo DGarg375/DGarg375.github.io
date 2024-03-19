@@ -24,11 +24,11 @@ function App() {
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
   const [loader, setLoader] = useState(true);
   const [images, setImages] = useState([firstBackgroundImage]);
-  const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
+  const [projectsRef, projectsInView] = useInView({ threshold: 0.85,
     triggerOnce: false });
   const [placeholderOneRef, placeholderOneInView] = useInView({ threshold: 0.35, triggerOnce: false });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: false });
-  const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: false });
+  const [contactRef, contactInView] = useInView({ threshold: 0.85, triggerOnce: false });
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,

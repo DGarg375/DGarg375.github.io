@@ -10,10 +10,10 @@ import { aboutBundle } from '../aboutMeta';
 // Comment changed for testing
 
 const MobileComponent = () => {
-    const [projectsRef, projectsInView] = useInView({ threshold: 0.99,
+    const [projectsRef, projectsInView] = useInView({ threshold: 0.75,
         triggerOnce: true });
-    const [aboutRef, aboutInView] = useInView({ threshold: 0.85, triggerOnce: true });
-    const [contactRef, contactInView] = useInView({ threshold: 0.99, triggerOnce: true });
+    const [aboutRef, aboutInView] = useInView({ threshold: 0.75, triggerOnce: true });
+    const [contactRef, contactInView] = useInView({ threshold: 0.75, triggerOnce: true });
     return(
         <div className="App">
             <div class="layout" id="mobile-layout">
