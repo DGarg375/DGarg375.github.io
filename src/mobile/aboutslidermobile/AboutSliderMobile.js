@@ -10,9 +10,7 @@ const AboutSliderMobile = (props) => {
     const currentSlide = props.slides[`slide_${counterA}`];
 
     const toggleButtonFunction = () => {
-        setTimeout(() => {
-            setToggleAbout(!toggleAbout);
-        }, 200);
+        setToggleAbout(!toggleAbout);
     }
 
     useEffect(() => {
