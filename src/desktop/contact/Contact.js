@@ -1,19 +1,19 @@
 import './Contact.css';
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 
 const Resume = () => {
+    const [toggleMobileView, setMobileWindow] = useState(true);
+    useEffect(() => {
+        
+    }, []);
+    const runFunction = () => {
+        setMobileWindow(!toggleMobileView);
+    };
     return(
-        <Document>
-            <Page size="A4">
-                <View>
-                    <Text>Here the resume would go</Text>
-                </View>
-            </Page>
-        </Document>
+        <div>{toggleMobileView ? <div class="dialog-mobile-toggle"><div class="toggle-text">Mobile phone version available now!<br></br>Scan the QR code below with your phone<br></br>OR<br></br> ENABLE a screen here. </div><button class="resume-toggle-button" onClick={runFunction}>ENABLE</button><div class="QR_portfolio"></div></div>:<div><embed class="resume-cont-border-styles" style={{border: "5px solid rgba(255, 87, 51, 1)"}} src="/" width="65%" height="740px"></embed><button class="resume-toggle-button" onClick={runFunction}>CLOSE</button></div>}</div>
     );
-}
+};
 
 const Contact = () => {
     const form = useRef();
