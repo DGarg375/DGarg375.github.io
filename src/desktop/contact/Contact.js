@@ -2,6 +2,19 @@ import './Contact.css';
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
+const Resume = () => {
+    const [toggleMobileView, setMobileWindow] = useState(true);
+    useEffect(() => {
+        
+    }, []);
+    const runFunction = () => {
+        setMobileWindow(!toggleMobileView);
+    };
+    return(
+        <div>{toggleMobileView ? <div class="dialog-mobile-toggle"><div class="toggle-text">Mobile phone version available now!<br></br>Scan the QR code below with your phone<br></br>OR<br></br> ENABLE a screen here. </div><button class="resume-toggle-button" onClick={runFunction}>ENABLE</button><div class="QR_portfolio"></div></div>:<div><embed class="resume-cont-border-styles" style={{border: "5px solid rgba(255, 87, 51, 1)"}} src="/" width="65%" height="740px"></embed><button class="resume-toggle-button" onClick={runFunction}>CLOSE</button></div>}</div>
+    );
+};
+
 const Contact = () => {
     const form = useRef();
     const [checkSubmit, setCheckSubmit] = useState(false);
@@ -34,7 +47,7 @@ const Contact = () => {
     }, [])
     return(
         <div class="contact-main">
-            {windowSize[0] < 940 ? <></> : <div class="photo-base"><img id="contact-photo" src="./icons8-dev-windows-11/contact-us.png" alt="man saying contact me"></img></div>}
+            {windowSize[0] < 940 ? <></> : <div class="resume-container"><Resume /></div>}
             <div class="contact-base-container">
                 <div class="contact-title" id="contact-title-id">Contact Me</div>
                 <div class="contact-form" id="contact-form-main-id">

@@ -243,6 +243,44 @@ html {
   }
 }
 
+.resume-toggle-button {
+  background: transparent;
+  width: 140px;
+  height: 45px;
+  color: black; 
+  font-size: 1rem;
+  font-weight: bold;
+  border: 3px solid black;
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+.resume-toggle-button:hover {
+  cursor: pointer;
+  color: rgba(255, 87, 51, 1);
+  border: 3px solid rgba(255, 87, 51, 1);
+}
+
+.resume-cont-border-styles {
+  border-radius: 50px;
+  margin-top: 50px;
+  margin-right: 185px;
+}
+
+.dialog-mobile-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-text {
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  width: 355px;
+}
+
 .desktop-abouts {
   .img-base {
     border: 3px solid white;

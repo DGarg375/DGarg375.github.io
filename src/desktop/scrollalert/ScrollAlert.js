@@ -8,7 +8,7 @@ const ScrollAlert = () => {
       if(targetElement) {
         const targetPosition = targetElement.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        setIsEndOfScroll(targetPosition <= windowHeight);
+        setIsEndOfScroll(targetPosition <= windowHeight-420);
       }
     };
 
