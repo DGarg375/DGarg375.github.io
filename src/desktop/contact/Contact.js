@@ -1,6 +1,19 @@
 import './Contact.css';
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+
+const Resume = () => {
+    return(
+        <Document>
+            <Page size="A4">
+                <View>
+                    <Text>Here the resume would go</Text>
+                </View>
+            </Page>
+        </Document>
+    );
+}
 
 const Contact = () => {
     const form = useRef();
@@ -34,7 +47,7 @@ const Contact = () => {
     }, [])
     return(
         <div class="contact-main">
-            {windowSize[0] < 940 ? <></> : <div class="photo-base"><img id="contact-photo" src="./icons8-dev-windows-11/contact-us.png" alt="man saying contact me"></img></div>}
+            {windowSize[0] < 940 ? <></> : <div class="resume-container"><Resume /></div>}
             <div class="contact-base-container">
                 <div class="contact-title" id="contact-title-id">Contact Me</div>
                 <div class="contact-form" id="contact-form-main-id">
